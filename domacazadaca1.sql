@@ -1,6 +1,4 @@
-# linija koja počne s hash (shift + 3) je komentar
-# Ovo je SQL skripta
-# naredba za izvođenje
+
 # C:\xampp\mysql\bin\mysql -uroot < C:\Users\php\Documents\GitHub\Jukic-zadaca\domacazadaca1.sql
 
 
@@ -9,4 +7,24 @@ create database domacazadaca1;
 use domacazadaca;
 
 
+#frizerski #salon za uljepsavanje #udruga za zastitu zivotinja
+create table djelatnici (
+    ime varchar(50),
+    prezime varchar(50),
+    smjena varchar(50),
+    usluga varchar(50),
+   
+);
 
+create table korisnik (
+    ime varchar(50),
+    prezime varchar(50),
+    termin varchar(50)
+);
+
+#udruga za zastitu zivotinja
+create table sticenici (
+    ime varchar(50),
+    vrsta_zivotinje varchar(50),
+    pasmina varchar(50)
+);
