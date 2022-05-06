@@ -4,19 +4,21 @@
 
 drop database if exists domacazadaca1;
 create database domacazadaca1;
-use domacazadaca;
+use domacazadaca1;
 
 
 #frizerski #salon za uljepsavanje #udruga za zastitu zivotinja
+show tables;
+
 create table djelatnici (
     ime varchar(50),
     prezime varchar(50),
     smjena varchar(50),
-    usluga varchar(50),
+    usluga varchar(50)
    
 );
 
-create table korisnik (
+create table korisnici (
     ime varchar(50),
     prezime varchar(50),
     termin varchar(50)
