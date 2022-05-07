@@ -13,7 +13,7 @@ use domacazadaca1;
 create table djelatnici (
     ime varchar(50),
     prezime varchar(50),
-    smjena varchar(50),
+    smjena time,
     usluga varchar(50),
     #udruga za zastitu
     br_sticenika varchar(50)
@@ -23,7 +23,7 @@ create table djelatnici (
 create table korisnici (
     ime varchar(50),
     prezime varchar(50),
-    termin varchar(50)
+    termin time
 );
 
 #udruga za zastitu zivotinja
@@ -48,11 +48,12 @@ create table djeca (
 create table izlozbe (
     ime_izlozbe varchar(50),
     ime_autora varchar(50),
+    trajanje_izlozbe time,
     br_djela varchar(50),
     kustos varchar(50)
 );
 #samostan
-create table samostan(
+create table svecenici(
     ime varchar(50),
     prezime varchar(50),
     titula varchar(50)
@@ -67,7 +68,8 @@ create table vozac(
     ime varchar(50),
     prezime varchar(50),
     vozilo_br varchar(50),
-    recenzija varchar(50)
+    recenzija varchar(50),
+    smjena time
 
 );
 #postolarska radnja
@@ -85,3 +87,17 @@ create table urar(
     kontakt varchar(50)
 
 );
+#doktorska ordinacija
+create table doktor (
+    ime varchar(50),
+    prezime varchar(50),
+    specijalizacija varchar(50),
+    dezurstvo time
+);
+create table sestre (
+    ime varchar(50),
+    prezime varchar(50),
+    odjel varchar(50),
+    smjena time
+
+)
