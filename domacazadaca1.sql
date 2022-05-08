@@ -1,3 +1,5 @@
+#svi zadatci/zanimanja u istoj bazi
+
 
 # C:\xampp\mysql\bin\mysql -uroot < C:\Users\php\Documents\GitHub\Jukic-zadaca\domacazadaca1.sql
 
