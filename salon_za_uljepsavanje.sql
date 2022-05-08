@@ -11,3 +11,8 @@ create table djelatnice (
 
 
 );
+create table korisnici (
+    ime varchar(50),
+    prezime varchar (50),
+    termin datetime
+);

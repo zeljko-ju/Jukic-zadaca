@@ -10,6 +10,7 @@ create table djelatnice (
     usluga varchar(50),
     smjena datetime
 );
+
 create table korisnici (
     ime varchar(50),
     prezime varchar (50),
