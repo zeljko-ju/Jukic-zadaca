@@ -22,10 +22,26 @@ insert into zupanija (naziv)
 values ('Osječko-baranjska županija');
 
 insert into zupanija (naziv)
-values ('Brodsko posavska županija');
+values ('Brodsko-posavska županija');
 
 insert into zupanija (naziv)
 values ('Koprivničko-križevačka županija');
 
 insert into opcina (zupanija, naziv)
 values (1, 'Čepin');
+
+insert into opcina (zupanija, naziv)
+values (1, 'Čeminac');
+
+insert into opcina (zupanija, naziv)
+values (2, 'Davor');
+
+insert into opcina (zupanija, naziv)
+values (2, 'Nova Kapela');
+
+insert into opcina (zupanija, naziv)
+values (1, 'Antunovac');
+
+insert into opcina (zupanija, naziv)
+values (1, 'Bilje');
+
