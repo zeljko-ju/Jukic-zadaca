@@ -7,20 +7,7 @@ use regionalna_samouprava;
 create table zupanija (
     sifra int not null primary key auto_increment,
     naziv varchar(50) not null,
-    zupan int not null
-);
-
-create table opcina (
-    sifra int not null primary key auto_increment,
-    zupanija int not null,
-    naziv varchar(50)
-);
-
-create table mjesto (
-    sifra int not null primary key auto_increment,
-    opcina int not null,
-    naziv varchar(50)
-
+    zupan int
 );
 
 create table zupan (
@@ -32,14 +19,27 @@ create table zupan (
     
 );
 
+create table opcina (
+    sifra int not null primary key auto_increment,
+    zupanija int,
+    naziv varchar(50)
+);
+
+create table mjesto (
+    sifra int not null primary key auto_increment,
+    opcina int not null,
+    naziv varchar(50)
+
+);
 
 
-alter table mjesto add foreign key (opcina) references opcina(sifra);
 
 alter table zupanija add foreign key (zupan) references zupan(sifra);
 
+alter table mjesto add foreign key (opcina) references opcina(sifra);
 
 alter table opcina add foreign key (zupanija) references zupanija(sifra);
+
 
 insert into zupan (ime, prezime)
 values ('Ivan', 'Anušić');
@@ -57,9 +57,27 @@ insert into zupanija (naziv, zupan)
 values ('Brodsko-posavska županija', 2);
 
 insert into zupanija (naziv, zupan)
-values ('Međimurska', 3)
+values ('Međimurska', 3);
 
 
+insert into opcina (zupanija, naziv)
+values (1, 'Semeljci');
 
+
+insert into opcina (zupanija, naziv)
+values (1, 'Antunovac');
+
+insert into opcina (zupanija, naziv)
+values (2, 'Davor');
+
+insert into opcina (zupanija, naziv)
+values (2, 'Nova Kapela');
+
+
+insert into mjesto (opcina, naziv)
+values (2, 'Ernestinovo');
+
+insert into mjesto (opcina, naziv)
+values (3, 'Savski Bok');
 
 
