@@ -23,10 +23,19 @@ create table programer (
     sifra int not null primary key auto_increment,
     ime varchar(50),
     prezime varchar(50),
-    datum_rodena datetime,
+    datum_rodjenja datetime,
     placa decimal(18,2)
 );
 
 
 alter table sudjeluje add foreign key (projekt) references projekt(sifra);
 alter table sudjeluje add foreign key (programer) references programer(sifra);
+
+insert into projekt (naziv, cijena)
+values ('edunovapp25', '74999,99');
+
+insert into programer (ime, prezime, datum_rodjenja, placa)
+values ('Željko', 'Jukić', '1991-03-26', '7865,14');
+
+insert into sudjeluje (projekt, programer, datum_pocetka, datum_kraja)
+values (1, 1, '2022-03-03', '2028-01-01');

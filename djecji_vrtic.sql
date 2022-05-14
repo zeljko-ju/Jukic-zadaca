@@ -2,6 +2,8 @@ drop database if exists djecji_vrtic;
 create database djecji_vrtic;
 use djecji_vrtic
 
+
+
 create table odgajateljice (
     ime varchar(50),
     prezime varchar(50),
