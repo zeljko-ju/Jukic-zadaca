@@ -161,3 +161,15 @@ update predavac set osoba=9 where sifra=3;
 delete from predavac where sifra=4;
 select *from osoba;
 update osoba set oib=78706652239 where sifra=9;
+
+
+#brisanje sebe iz baze podataka
+
+#select * from predavac;
+ delete from predavac where sifra=3;
+#select *from polaznik;
+delete from polaznik where sifra=7;
+delete from osoba where sifra=9;
+#select * from osoba;
+
+
