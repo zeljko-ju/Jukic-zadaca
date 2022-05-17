@@ -142,3 +142,17 @@ values(null, 20, null),
 (null, 22, null),
 (null, 23, null), 
 (null, 24, null);
+
+#dodao sebe kao predavaca+ vjezba update i delete
+select * from smjer;
+select *from osoba;
+update smjer set trajanje=150 where sifra =2;
+update smjer 
+set upisnina=350, 
+certificiran=true
+where sifra=2;
+select *from predavac;
+update predavac set osoba=2 where sifra=2;
+
+update predavac set osoba=9 where sifra=3;
+delete from predavac where sifra=4;
