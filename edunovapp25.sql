@@ -156,3 +156,8 @@ update predavac set osoba=2 where sifra=2;
 
 update predavac set osoba=9 where sifra=3;
 delete from predavac where sifra=4;
+
+update predavac set osoba=9 where sifra=3;
+delete from predavac where sifra=4;
+select *from osoba;
+update osoba set oib=78706652239 where sifra=9;
