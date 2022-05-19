@@ -214,3 +214,7 @@ select * from osoba where ime like 'M%';
 select * from osoba where ime like '%a%';
 select * from osoba where prezime like '%uk%';
 
+
+
+
+
