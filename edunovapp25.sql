@@ -85,7 +85,7 @@ values (null, 1, null);
 select * from predavac;
 
 
-insert into osoba (sifra, ime, prezime, email, oib)
+insert into osoba (sifra, prezime, ime, email, oib)
 values (null, 'Kobe', 'Bryant', 'kobac@gmail.com', null), 
 (null, 'Marko', 'Petrić', 'marac@gmail.com', null ), 
 (null,'Todorović','Filip','filip.tod95@gmail.com',null),
@@ -170,6 +170,47 @@ update osoba set oib=78706652239 where sifra=9;
 #select *from polaznik;
 delete from polaznik where sifra=7;
 delete from osoba where sifra=9;
-#select * from osoba;
+#select * from osoba; 
 
+
+#19.05. select naredba vjezbanje
+
+select * from smjer;
+
+select naziv, cijena from smjer;
+
+select naziv, 'Osijek' from smjer;
+
+select naziv, now() from smjer;
+select * from smjer;
+
+#zamjensko ime
+select naziv as smjer, 'Edunova' as skola from smjer;
+select osoba as predavač from predavac;
+
+select osoba as polaznik, brojugovora, from polaznik;
+select * from polaznik;
+select 'classified' as brojugovora;
+
+select naziv, cijena from smjer;
+
+select *, naziv from smjer;
+
+select ime, prezime from osoba;
+
+select datumpocetka, naziv from grupa;
+
+select * from smjer where sifra=3;
+#and-oba moraju zadovoljavati da bio dobio 1, sve ostalo izbačeno
+select * from osoba where sifra>3 and sifra<5;
+#prikazuje sve rezultate koji su zadovoljeni u naredbama (ili) u primjeru će prikazati sve manje od 3 i =5
+select * from osoba where sifra<3 or sifra=5;
+# not izbacuje samo navedenu vrijednost 
+select * from osoba where not (sifra=4);
+
+#like in between
+select * from osoba;
+select * from osoba where ime like 'M%';
+select * from osoba where ime like '%a%';
+select * from osoba where prezime like '%uk%';
 
