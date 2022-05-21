@@ -9,42 +9,55 @@ use udruga_za_zastitu_zivotinja;
 create table djelatnik (
     sifra int not null primary key auto_increment,
     ime varchar(50),
-    prezime varchar(50),
-    sticenik int,
-    broj_sticenika varchar(50)
+    prezime varchar(50)
+    
+    
 );
 
 create table sticenik (
     sifra int not null primary key auto_increment,
-    sticenik varchar(50),
-    djelatnik int,
+    ime varchar(50),
     vrsta_zivotinje varchar(50),
-    pasmina varchar(50)
+    pasmina varchar(50),
+    prostor int,
+    djelatnik int
 );
 
 
 create table prostor (
     sifra int not null primary key auto_increment,
-    sticenik int not null,
     broj_prostora varchar(50)
 
 );
 
 alter table sticenik add foreign key(djelatnik) references djelatnik(sifra);
-alter table prostor  add foreign key(sticenik) references sticenik(sifra);
+alter table sticenik add foreign key(prostor) references prostor(sifra);
 
+#unos podataka i test funkcionalnosti
 
-insert into sticenik (sticenik, vrsta_zivotinje, pasmina)
+#sticenik
+insert into sticenik (ime, vrsta_zivotinje, pasmina)
 values ('Bobi', 'pas', 'mješanac');
 
-insert into sticenik (sticenik, vrsta_zivotinje, pasmina)
+insert into sticenik (ime, vrsta_zivotinje, pasmina)
 values ('Ares', 'pas', 'staford');
 
-insert into sticenik (sticenik, vrsta_zivotinje, pasmina)
+insert into sticenik (ime, vrsta_zivotinje, pasmina)
 values ('Kitty', 'mačka', 'mjesanac');
+#djelatnik
+insert into djelatnik (sifra, ime, prezime)
+	values (null, 'Marko', 'Kesić');
+insert into sticenik (sifra, ime, vrsta_zivotinje, pasmina, djelatnik, prostor)
+	values (null, 'boby', 'pas', 'ovčar', 1, 1),
+	(null, 'miki', 'pas', 'jazavčar', 1, 1);
+#prostor
+insert into prostor (sifra, broj_prostora)
+	values (null,'PR001');
 
-insert into djelatnik (ime, prezime, sticenik, broj_sticenika)
-values ('Marko', 'Marković', 1, '5');
+
+
+
+
 
 
 
