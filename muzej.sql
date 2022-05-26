@@ -44,7 +44,8 @@ alter table izlozba add foreign key (djelo) references djelo(sifra);
 insert into kustos(sifra, ime)
 	values (null, 'Stjepan');
 
-#insert into izlozba (sifra, ime_izlozbe, djelo, datum_odrzavanja, kustos, sponzor)
+#
+insert into izlozba (sifra, ime_izlozbe, djelo, datum_odrzavanja, kustos, sponzor)
 #	values (null, 'Culture day2022', 1,'2022-03-03',1, 1);
 	
 insert into djelo (sifra, ime_djela, ime_autora)
