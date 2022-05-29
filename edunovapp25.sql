@@ -58,36 +58,54 @@ alter table clan add foreign key (polaznik) references polaznik(sifra);
 alter table polaznik add foreign key (osoba) references osoba(sifra);
 alter table predavac add foreign key (osoba) references osoba(sifra);
 
-select * from smjer;
-insert into smjer values(null, 'PHP programiranje',6999.99,null, null,true);
 
-#dobar nacin
-insert into smjer (sifra, naziv, cijena)
-values (null, 'Java programiranje', 6999.99);
+# unos podataka
+# loš način
+# 1 - dobivena vrijednost primarnog ključa
+insert into smjer values 
+(null,'PHP programiranje',5999.99,130,null,false);
 
-insert into smjer(sifra, naziv, cijena, trajanje, upisnina, certificiran)
-values (null, 'Računovodstvo', 4000, null, null, false);
-select * from grupa;
-insert into grupa (sifra, naziv, datumpocetka, maksimalnopolaznika, smjer, predavac)
-values (null,'pp25', '2022-04-23', 30, 1,null);
+# bolji način
+# 2
+insert into smjer(naziv,cijena) 
+values ('Java programiranje',5999.99);
 
-#dodaj osobu pa predavača
-select * from osoba;
-insert into osoba (sifra, ime, prezime, email, oib)
-values (null, 'Tomislav', 'Jakopec', 'tjakopec@gmail.com', null);
- 
-insert into osoba (sifra, ime, prezime, email, oib)
-values (null, 'Shaquile', 'O Neal', 'šakacenbiej@gmail.com', null);
-
-insert into predavac (sifra, osoba, iban)
-values (null, 1, null);
-
-select * from predavac;
+# primjer dobre prakse
+# 3
+insert into 
+smjer(sifra,naziv,cijena,trajanje,
+upisnina,certificiran)
+values (null,'Računovodstvo',4000,120,
+300,true);
 
 
-insert into osoba (sifra, prezime, ime, email, oib)
-values (null, 'Kobe', 'Bryant', 'kobac@gmail.com', null), 
-(null, 'Marko', 'Petrić', 'marac@gmail.com', null ), 
+# 1
+insert into grupa 
+(sifra,naziv,datumpocetka,maksimalnopolaznika,
+smjer,predavac)
+values 
+(null,'PP25','2022-04-23',20,1,null);
+
+insert into grupa
+(sifra,naziv,datumpocetka,maksimalnopolaznika,
+smjer,predavac)
+values
+(null,'JP26','2022-04-23',20,2,null);
+
+
+# 1
+insert into osoba (sifra,ime,prezime,email,oib)
+values (null,'Tomislav','Jakopec','tjakopec@gmail.com',null);
+
+# unijeti osobu Shaquille O'Neal
+# 2
+insert into osoba (sifra,ime,prezime,email,oib)
+values (null,'Shaquille','O''Neal','saki@gmail.com',null);
+
+# jedna insert naredba može unositi više redaka u tablicu
+# 3 - 17
+insert into osoba (sifra,prezime,ime,email,oib)
+values
 (null,'Todorović','Filip','filip.tod95@gmail.com',null),
 (null,'Majer','Antonio','majer.antonio@gmail.com',null),
 (null,'Filipović','Srđan','srdjanfilipovic991@gmail.com',null),
@@ -102,119 +120,68 @@ values (null, 'Kobe', 'Bryant', 'kobac@gmail.com', null),
 (null,'Bukovec','Boris','botaosijek@gmail.com',null),
 (null,'Kovač','Filip','chilim.dj@gmail.com',null),
 (null,'Vuletić','Antonio','avuletic2212@gmail.com',null),
-(null,'Andrija','Kruhoberec','akruhoberec1@outlook.com',null);
-select * from polaznik;
-insert into polaznik (sifra, osoba, brojugovora)
-values (null, 3, null),
-(null, 4, null),
-(null, 5, null),
-(null, 6, null),
-(null, 7, null),
-(null, 8, null),
-(null, 9, null),
-(null, 10, null),
-(null, 11, null),
-(null, 12, null),
-(null, 13, null),
-(null, 14, null),
-(null, 15, null),
-(null, 16, null),
-(null, 17, null),
-(null, 18, null),
-(null, 19, null);
-#Tehnicar za mrezu
+(null,'Kruhoberec','Andrija','akruhoberec1@outlook.com',null);
 
-insert into smjer(sifra, naziv, cijena, trajanje, upisnina, certificiran)
-values (null, 'Tehničar za Mrežu', '7999.99', null, '180', true);
 
-insert into osoba (sifra, ime, prezime, email, oib)
-values (null, 'Niko', 'Jukić', 'nikoslav@gmail.com', null),
-		(null, 'Nora', 'Jukić', 'norica@gmail.com', null ),
-		(null, 'Ivona', 'Milaković', 'iwoona@gmail.com', null),
-		(null, 'Ivan', 'Jukić', 'ivoo@gmail.com', null),
-		(null, 'Momirka', 'Jukić', 'moma@gmail.com,', null);
-	
-select * from polaznik;
 
-insert into polaznik (sifra, osoba, brojugovora)
-values(null, 20, null),
-(null, 21, null), 
-(null, 22, null),
-(null, 23, null), 
-(null, 24, null);
+# 1 - 2
+insert into predavac(sifra,osoba,iban)
+values (null,1,null),(null,2,null);
 
-#dodao sebe kao predavaca+ vjezba update i delete
-select * from smjer;
-select *from osoba;
-update smjer set trajanje=150 where sifra =2;
-update smjer 
-set upisnina=350, 
-certificiran=true
+
+# 1 - 15
+insert into polaznik (sifra,osoba,brojugovora)
+values
+(null,3,null),
+(null,4,null),
+(null,5,null),
+(null,6,null),
+(null,7,null),
+(null,8,null),
+(null,9,null),
+(null,10,null),
+(null,11,null),
+(null,12,null),
+(null,13,null),
+(null,14,null),
+(null,15,null),
+(null,16,null),
+(null,17,null);
+
+
+
+insert into clan (grupa,polaznik)
+values (1,1),(1,2),(1,3),(1,4),(1,5),
+(1,6),(1,7),(1,8),(1,9),(1,10),
+(1,11),(1,12),(1,13),(1,14),(1,15);
+
+# DZ
+# Unijeti smjer Tehničar za mrežu
+# Unijeti svoju užu rodbinu za polaznike
+
+
+# PREPORUKA: ne izvoditi update bez where
+update smjer set trajanje=130 where sifra=2;
+
+update smjer set 
+upisnina=500,
+certificiran =true
 where sifra=2;
-select *from predavac;
-update predavac set osoba=2 where sifra=2;
 
-update predavac set osoba=9 where sifra=3;
-delete from predavac where sifra=4;
+update smjer set trajanje=180 where sifra=2;
 
-update predavac set osoba=9 where sifra=3;
-delete from predavac where sifra=4;
-select *from osoba;
-update osoba set oib=78706652239 where sifra=9;
+# uvećanje za 100 kn
+update smjer set cijena=cijena+100;
 
 
-#brisanje sebe iz baze podataka
+# umanjenje za 100 kn
+update smjer set cijena=cijena-100;
 
-#select * from predavac;
- delete from predavac where sifra=3;
-#select *from polaznik;
-delete from polaznik where sifra=7;
-delete from osoba where sifra=9;
-#select * from osoba; 
+# uvećanje za 10%
+update smjer set cijena=cijena*1.1;
 
-
-#19.05. select naredba vjezbanje
-
-select * from smjer;
-
-select naziv, cijena from smjer;
-
-select naziv, 'Osijek' from smjer;
-
-select naziv, now() from smjer;
-select * from smjer;
-
-#zamjensko ime
-select naziv as smjer, 'Edunova' as skola from smjer;
-select osoba as predavač from predavac;
-
-select osoba as polaznik, brojugovora, from polaznik;
-select * from polaznik;
-select 'classified' as brojugovora;
-
-select naziv, cijena from smjer;
-
-select *, naziv from smjer;
-
-select ime, prezime from osoba;
-
-select datumpocetka, naziv from grupa;
-
-select * from smjer where sifra=3;
-#and-oba moraju zadovoljavati da bio dobio 1, sve ostalo izbačeno
-select * from osoba where sifra>3 and sifra<5;
-#prikazuje sve rezultate koji su zadovoljeni u naredbama (ili) u primjeru će prikazati sve manje od 3 i =5
-select * from osoba where sifra<3 or sifra=5;
-# not izbacuje samo navedenu vrijednost 
-select * from osoba where not (sifra=4);
-
-#like in between
-select * from osoba;
-select * from osoba where ime like 'M%';
-select * from osoba where ime like '%a%';
-select * from osoba where prezime like '%uk%';
+# umanjenje za 10%
+update smjer set cijena=cijena*0.9;
 
 
-
-
-
+delete from smjer where sifra=3;

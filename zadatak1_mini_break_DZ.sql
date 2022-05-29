@@ -1,12 +1,11 @@
 #C:\xampp\mysql\bin\mysql -uroot --default_character_set=utf8  < C:\Users\php\Documents\GitHub\Jukic-zadaca\zadatak1_mini_break_DZ.sql
-#vrijeme start1 17:38  stop1 17:49 start2 18:50 end2 19:28 start 3 22:00 end3 22:37
+#vrijeme start1 17:38  stop1 17:49 start2 18:50 end2 19:28 start 3 22:00 end3 22:37 start4 13:10 end4 13:58
 
 drop database if exists dz_vjezba1;
 create database dz_vjezba1;
 use dz_vjezba1;
 
 create table sestra (
-    sifra int not null primary key auto_increment,
     introvertno boolean,
     haljina varchar(31),
     marka decimal(16,6),
@@ -44,7 +43,7 @@ create table mladic (
 
 );
 create table sestra_svekar (
-    sifra int not null primary key auto_increment,
+    sifra int not null primary key auto_increment,:
     sestra int, 
     svekar int
 );
@@ -82,7 +81,10 @@ alter table mladic add foreign key (muskarac) references muskarac(sifra);
 alter table sestra_svekar add foreign key (svekar) references svekar(sifra);
 alter table cura add foreign key(punac) references punac(sifra);
 
-
+insert into zena (sifra, hlace, kratkamajica)
+	values (null, 'levis','puma'), 
+	(null, 'tiger of sweeden', 'addidas'),
+	(null, 'nemam pojma', 'elviton');
 
 insert into muskarac (sifra, bojaociju, hlace, marka, modelnaocala,zena)	
 	values (null, 'crna', 'levis', 15.78,'ray ban', 1),
@@ -90,10 +92,7 @@ insert into muskarac (sifra, bojaociju, hlace, marka, modelnaocala,zena)
 	(null, 'plava', 'levis', 15.15, 'Hugo Boss',3) ;
 	
 
-insert into zena (sifra, hlace, kratkamajica)
-	values (null, 'levis','puma'), 
-	(null, 'tiger of sweeden', 'addidas'),
-	(null, 'nemam pojma', 'elviton');
+
 
 select * from muskarac;
 
@@ -120,3 +119,21 @@ select * from cura;
 
 
 select 15.77 as gustoca from cura;
+
+select a.dukserica, f.asocijalno, d.hlace 
+from 
+svekar a right join sestra_svekar b
+on a.sifra=b.svekar
+inner join sestra c
+on b.sestra=c.sifra 
+left  join zena d
+on c.sifra =d.sestra 
+left join muskarac e
+on d.sifra=e.zena 
+left join mladic f
+on e.sifra = f.muskarac;
+
+select b.haljina, b.marka  
+from
+sestra_svekar a right join sestra b
+on a.sestra=b.sifra;
