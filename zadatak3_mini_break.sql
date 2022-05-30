@@ -123,7 +123,7 @@ select b.haljina, b.lipa, a.brat
 from 
 prijatelj_brat a right join prijatelj b 
 on a.prijatelj =b.sifra;
-
+select majica from ostavljena where lipa !=9 and lipa != 10 and lipa != 20 and lipa != 30 and lipa != 35;
 
 select a.ekstroventno, f.vesta, e.kuna 
 from
@@ -137,3 +137,30 @@ brat a right join prijatelj_brat b
  on d.sifra = e.ostavljena 
  left join punica f
  on e.sifra = f.snasa
+
+ delete from prijatelj where prstena > 17;
+
+#4
+
+select haljina from snasa where treciputa=null;
+
+#5. Prikažite nausnica iz tablice mladic, jmbag iz tablice prijatelj te 
+#kratkamajica iz tablice becar uz uvjet da su vrijednosti kolone 
+#treciputa iz tablice snasa poznate te da su vrijednosti kolone lipa iz 
+#tablice zena različite od 29. Podatke posložite po kratkamajica iz 
+#tablice becar silazno. (10)
+
+select a.nausnica, f.jmbag, e.kratkamajica
+from
+mladic a right join zena_mladic b
+on a.sifra = b.mladic 
+inner join zena c
+on b.zena = c.sifra
+inner join snasa d
+on c.sifra = d.zena
+left join becar e
+on d.sifra = e.snasa 
+left join prijatelj f
+on e.sifra = f.becar
+where d.treciputa is not null and c.lipa <>29
+order by e.kratkamajica;
