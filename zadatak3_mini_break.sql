@@ -123,3 +123,17 @@ select b.haljina, b.lipa, a.brat
 from 
 prijatelj_brat a right join prijatelj b 
 on a.prijatelj =b.sifra;
+
+
+select a.ekstroventno, f.vesta, e.kuna 
+from
+brat a right join prijatelj_brat b
+ on a.sifra = b.brat 
+ inner join prijatelj c
+ on b.prijatelj = c.sifra 
+ inner join ostavljena d 
+ on c.sifra = d.prijatelj 
+ left join snasa e
+ on d.sifra = e.ostavljena 
+ left join punica f
+ on e.sifra = f.snasa
