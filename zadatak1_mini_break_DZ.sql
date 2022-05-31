@@ -43,7 +43,7 @@ create table mladic (
 
 );
 create table sestra_svekar (
-    sifra int not null primary key auto_increment,:
+    sifra int not null primary key auto_increment,
     sestra int, 
     svekar int
 );
