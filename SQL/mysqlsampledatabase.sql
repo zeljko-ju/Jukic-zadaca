@@ -350,7 +350,72 @@ on c.customerNumber =d.customernumber
 set a.buyPrice =a.buyPrice *1.1
 where d.city ='Auckland';
 
+#još malo vježbe
+#PONOVNO: KOLIKO JE PROIZVODA KUPLJENO U KOJOJ DRŽAVI
+select d.city, count(a.productCode)
+from products a 
+inner join orderdetails b
+on a.productCode =b.productCode 
+inner join orders c
+on b.orderNumber =c.orderNumber 
+inner join customers d
+on c.customerNumber =d.customerNumber
+group by d.city;
 
+
+#povećaj svim proizvodima u Auckland cijenu za 55%
+update
+products a 
+inner join orderdetails b
+on a.productCode =b.productCode 
+inner join orders c
+on b.orderNumber =c.orderNumber 
+inner join customers d
+on c.customerNumber =d.customerNumber
+set a.buyPrice =a.buyPrice *0.55
+where d.city= 'Auckland';
+
+#obrisati sve proizvode koje su kupili 
+#kupci iz Aucklanda 
+
+#1. prvo napravi delete bazu
+create table ideuproslost
+select distinct  d.productCode, d.productName, d.buyPrice 
+from customers a 
+inner join orders b
+on a.customerNumber =b.customerNumber
+inner join orderdetails c
+on b.orderNumber  =c.ordernumber
+inner join products d
+on c.productCode = d.productCode 
+where a.city = 'Auckland'
+order by 1;
+
+delete from orderdetails
+where productcode in(
+select productcode from ideuproslost);
+
+delete from products 
+where productCode in (
+select productCode from ideuproslost);
+
+drop table ideuproslost;
+#otvaranje ureda u osijeku
+select * from offices;
+INSERT INTO offices
+(officeCode, city, phone, addressLine1, addressLine2, state, country, postalCode, territory)
+VALUES('8', 'Osijek', '031031031', 'Radiceva 44', NULL, NULL, 'Croatia', '31000', 'Europe');
+
+
+#dodaj sebe da radiš iz ureda u Osijeku
+update employees 
+set officeCode =8
+where employeeNumber=1623;
+
+select * from employees;
+update employees 
+set officeCode =1
+where firstName = 'Željko' and lastName ='Jukic';
 
 
 
