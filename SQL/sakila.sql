@@ -1,3 +1,5 @@
+#C:\xampp\mysql\bin\mysql -uroot --default_character_set=utf8 < C:\Users\php\Documents\GitHub\Jukic-zadaca\SQL\sakila.sql
+
 -- Sakila Sample Database Schema
 -- Version 1.0
 
@@ -47071,11 +47073,107 @@ COMMIT;
 -- Dumping data for table store
 --
 
-SET AUTOCOMMIT=0;
-INSERT INTO store VALUES (1,1,1,'2006-02-15 04:57:12'),
-(2,2,2,'2006-02-15 04:57:12');
-COMMIT;
+#SET AUTOCOMMIT=0;
+#INSERT INTO store VALUES (1,1,1,'2006-02-15 04:57:12'),
+#(2,2,2,'2006-02-15 04:57:12');
+#COMMIT;
+#
+#SET SQL_MODE=@OLD_SQL_MODE;
+#SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+#SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+#
+#
+#
+#select * from customer;
+#select * from store;
+#select * from staff;
+#
+##1. unesi sebe kao manager staff u novoj poslovnici u Osijeku
+#INSERT INTO country
+#(country, last_update)
+#VALUES('Croatia', current_timestamp());
+#select * from country where country  ='Croatia';
+#
+#INSERT INTO city
+#(city, country_id, last_update)
+#VALUES('Osijek', 19, current_timestamp());
+#
+#update city set country_id=110 where city ='Osijek';
+#
+#select * from city where city='Osijek';
+#INSERT INTO address
+#(address, address2, district, city_id, postal_code, phone, last_update)
+#VALUES('Radiceva 65', NULL, 'Balkan', 601, 31000, '+385031031', current_timestamp()),
+#('Radiceva 99', NULL, 'Balkan', 601, 31000, '+3850311311', current_timestamp());
+#select * from address where city_id=601;
+#
+#
+#
+#select * from staff_list;
+#INSERT INTO staff
+#(first_name, last_name, address_id, picture, email, store_id, active, username, password, last_update)
+#VALUES('Željko', 'Jukić', 608, NULL, 'zeljac@sakila.com', 1, 1, 'zeljac', NULL, current_timestamp());
+#select * from staff;
+#
+#
+#INSERT INTO store
+#(manager_staff_id, address_id, last_update)
+#VALUES(4, 601, current_timestamp());
+#select * from store;
+#
+#update store set address_id =606 where store_id =3;
+#
+##spoji podatke tako da kada odeš na store dobiješ svoje ime i prezime te adresu trgovine izlistanu odmah
+#
+#select b.first_name, b.last_name, c.address, d.city 
+#from 
+#store a inner join staff b
+#on a.manager_staff_id = b.staff_id
+#inner join address c
+#on a.address_id =c.address_id
+#inner join city d 
+#on c.city_id =d.city_id
+#order by b.first_name  desc;
+#
+##ok, nije loše, dosta si vremena izgubio pokušavajući spojiti krive tablice, obrati pažnju na ER i prije
+##nego kreneš spajati dobro prouči veze
+#
+##obriši film ID od 900-1000 e--- neuspješno, kod inventory zapnem i ne znam di ću// update:
+# inventory sam riješio sa dodavanjem tablice payments u priču ali i dalje zapne kad hoću obrisati iz baze films
 
-SET SQL_MODE=@OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+#create table zabrisanje 
+#select distinct a.film_id 
+#from film a inner join inventory b
+#on a.film_id =b.film_id 
+#inner join rental c 
+#on b.inventory_id =c.inventory_id 
+#inner join film_actor d
+#on a.film_id =d.film_id 
+#inner join film_category e
+#on a.film_id =e.film_id
+#inner join rental f 
+#on b.inventory_id =f.inventory_id
+#where a.film_id > 900;
+#
+#select * from zabrisanje;
+#select * from rental;
+#drop table zabrisanje;
+#delete from film_category where film_id in (
+#select film_id from zabrisanje);
+#
+#delete from film_actor where film_id in (
+#select film_id from zabrisanje);
+#
+#delete from rental where inventory_id  in (
+#select film_id from zabrisanje);
+#
+#delete from inventory where film_id in (
+#select film_id from zabrisanje);
+#
+#delete from film where film_id in (
+#select film_id from zabrisanje);
+#select * from inventory;
+#select * from rental;
+#select * from zabrisanje;
+#select * from film_list;
