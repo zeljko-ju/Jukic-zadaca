@@ -47138,7 +47138,7 @@ COMMIT;
 ##ok, nije loše, dosta si vremena izgubio pokušavajući spojiti krive tablice, obrati pažnju na ER i prije
 ##nego kreneš spajati dobro prouči veze
 #
-##obriši film ID od 900-1000 e--- neuspješno, kod inventory zapnem i ne znam di ću// update:
+##obriši film ID od 900-1000 --- neuspješno, kod inventory zapnem i ne znam di ću// update:
 # inventory sam riješio sa dodavanjem tablice payments u priču ali i dalje zapne kad hoću obrisati iz baze films
 
 
