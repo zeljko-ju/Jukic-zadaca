@@ -1,9 +1,44 @@
 body {
-   background-image: url(https://static.india.com/wp-content/uploads/2020/06/Bicycle1.jpg) ;
+   background: grey;
+
+   font: 1em/150% Helvetica, Arial, sans-serif;
+  padding: 1em;
+  margin: 0 auto;
+  max-width: 50em;
+  color: rgb(244, 9, 9);
+   
 }
 
-.background-image.opacity {
-    opacity: 0.5;
+ul{list-style-type: none;
+    background-color: grey;
+    margin: 0;
+    padding: 0;}
+.special {
+    color: red;
 }
-background-image: unset;
 
+ul {
+    list-style-type: none;
+    margin bottom: 1px;
+    padding: 1px;
+    overflow: hidden;
+    border-bottom: 2px dotted;
+}
+
+li {
+    float: left;
+  
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 15px 17px;
+    text-decoration: none;
+}
+
+/* A color changes when hovered over */
+li a:hover {
+    background-color: #7300ff;
+}

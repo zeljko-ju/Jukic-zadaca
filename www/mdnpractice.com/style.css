@@ -1,14 +1,85 @@
-html {
-    background-color: green;
-    font-size: 20px;
-  }
-  
-  ul {
-    background: red;
-    padding: 10px;
-    border: 1px solid black;
-  }
-  
-  li {
-    margin-left: 20px;
-  }
+h1 {color: red;
+    font-family: 'Courier New', Courier, monospace;}
+
+p {color: purple;
+font-family: 'Courier New', Courier, monospace;
+padding-left: 2em;
+}
+
+ul {
+  color:blue;
+  font-family: 'Courier New', Courier, monospace;
+  padding-left: 3.5em;
+}
+
+ul:hover {
+  color:brown;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.2em;
+}
+
+p:hover {
+  color:brown;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.2em;
+}
+a:link {color:pink;}
+a:hover {color: grey;}
+a:visited{color: brown;}
+ul{
+  list-style-type: "\1F44D"; // thumbs up sign
+}
+
+.posebni {
+  color: purple;
+  font-weight:900;
+}
+
+li em {color:orange}
+
+body h1 + p .posebni{
+  color: yellow;
+  background-color: black;
+  padding: 5px;
+}
+
+
+
+
+p {
+  color: blue;
+}
+
+.special {
+  color: red;
+}
+
+.box {
+  margin: 30px;
+  width: 100px;
+  height: 100px;
+  background-color: violet;
+  transform: rotate(0.8turn);
+}
+
+.box p, .circle p {
+  margin-top: 10px;
+  color: antiquewhite;
+ 
+}
+
+.circle {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: blue;
+}
+
+
+body {
+  font: 1em/150% Helvetica, Arial, sans-serif;
+  padding: 1em;
+  margin: 0 auto;
+  max-width: 33em;
+  color: black;
+}
