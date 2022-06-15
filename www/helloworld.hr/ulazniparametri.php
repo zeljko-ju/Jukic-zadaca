@@ -6,18 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style="color: <?=$_GET['boja'];?>""> 
-    
-    <ul>
+<body style="background-color: <?=$_GET['boja'];?>"> 
+
+    <ul style="color: <?=$_GET['tema'];?>">
         
         <li>
-            <a href="?tema=grey">grey</a>
-            <a href="?boja=pink">kdkfkdfkslf</a>
+            <a href="?tema=green">zelena</a>
+            <a href="?boja=pink">pink</a>
             <p>teksttekst</p>
+            <h1>ajde da vidimo</h1>
         </li>
         <hr />
         <li></li>
         <li></li>
+        <p>teksttekst</p>
+            <h1>ajde da vidimo</h1>
         <pre>
         <?php
         print_r($_GET);
