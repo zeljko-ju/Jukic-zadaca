@@ -12,28 +12,29 @@
     <!-- Start tijelo -->
     
       <div class="grid-x grid-margin-x" id="tijelo">
-        <div class="cell large-2 medium-4 small-6">
+        <div class="cell large-2">
           <div class="success callout">
-            Edunova
+            Baja
           </div>
         </div>
-        <div class="cell large-2 medium-4 small-6">
+        <div class="cell large-2">
           <div class="warning callout">  
-            Osijek
+            je
           </div>
         </div>
-        <div class="cell large-2 medium-4 small-6">
+        <div class="cell large-2">
           <div class="alert callout">
-            Ponedjeljak
+            do
+          </div>
+            <div class="cell large-2">
+          <div class="warning callout">  
+            jaja
           </div>
         </div>
       </div>
 
     <!-- End tijelo -->
 
-    <?php 
-
-    require_once 'podnozje.php'; ?>
 
      
     </div>
