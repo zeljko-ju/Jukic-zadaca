@@ -12,7 +12,9 @@
 <body>
     <ul class="style_type">
         <li><a href="index.html">home page</a></li>
-        <li><a href="kategorija.html">kategorija</a></li>
+        <li><a href="kategorija.html">kategorija</a>
+       
+        </li>
         <li><a href="modeli.html">modeli</a> </li>
         <li><a href="fotografije.html">fotografije</a></li>
         <li><a href="oprema.html">oprema</a></li>
