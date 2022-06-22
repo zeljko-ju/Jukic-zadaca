@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body style="font-family: <?=$_GET['font'];?>">
+
+
 <ul>    
         <h2>boja kockice</h2>
         <li>
@@ -20,12 +22,18 @@
         <li>
             <a href="?boja=blue">plava</a>
         </li>
+        <li>
+            <a href="?firstName=Željac"></a>
+        </li>
             </ul>
 
 <ul>
     <h2>font</h2>
     <li>
         <a href="?font=Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">Impact</a>
+    </li>
+    <li>
+        <a href="?font=Arial">Arial</a>
     </li>
 </ul>
         
