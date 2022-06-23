@@ -11,13 +11,14 @@
      
     </div>
   <!--tijelo -->
-  <div style="color: <?=$_GET['boja'];?>"  class="grid-x grid-margin-x" id="tijelo">
+  <div class="grid-x grid-margin-x" id="tijelo">
     <div class="cell small-4">
+    <php style="color: <?=$_GET['boja'];?>">
     <h3>Najbolja ponuda bicikala na tržištu</h3>    
     <img src="https://media.istockphoto.com/photos/mountain-biker-silhouette-in-action-against-the-sunset-concept-for-picture-id1056751684" alt="MTB">
     
     <li>
-        <a href="?tema=grey" href="?boja=white">vesela</a><br>
+        <a href="?tema=grey&?boja=white">vesela</a><br>
         <a href="?tema=white">svijetla</a>
     </li>
     </div>

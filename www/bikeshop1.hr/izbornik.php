@@ -11,8 +11,13 @@
         <a href="#">Kategorija</a>
         <ul class="menu vertical">
           <li>
-            <a href="#">MTB</a><ul><a href="brdskibicikl.php">Brdski bicikl</a>
-          </ul></li>
+            <a href="#">MTB</a><ul>
+            
+            <a href="brdskibicikl.php">Brdski bicikl
+            </a>
+            
+          </ul>
+          <ul><a href="brdskibicikl.php?tema=grey&boja=blue"></a></ul></li>
           <li><a href="#">Cestovni</a></li>
           <li><a href="#">Trekking</a></li>
         </ul>
