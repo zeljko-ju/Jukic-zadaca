@@ -10,7 +10,9 @@
       <li>
         <a href="#">Kategorija</a>
         <ul class="menu vertical">
-          <li><a href="#">MTB</a></li>
+          <li>
+            <a href="#">MTB</a><ul><a href="brdskibicikl.php">Brdski bicikl</a>
+          </ul></li>
           <li><a href="#">Cestovni</a></li>
           <li><a href="#">Trekking</a></li>
         </ul>

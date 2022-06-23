@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style="background-color: <?=$_GET['boja'];?>"> 
+<body style="background-color: <?=$_GET['tema'];?>"> 
 
-    <ul style="color: <?=$_GET['tema'];?>">
+    <ul style="color: <?=$_GET['boja'];?>">
         
         <li>
             <a href="?tema=green">zelena</a>
