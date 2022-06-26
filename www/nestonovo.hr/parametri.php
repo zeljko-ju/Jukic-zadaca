@@ -1,11 +1,12 @@
-
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
-  <?php require_once 'zagljavlje.php'?>
+  <head>
+    <?php require_once 'zagljavlje.php'; ?>
+  </head>
 <body>
-  <!--izbornik-->
-<?php include_once 'izbornik.php'?>
-  <!--tijelo-->  
+    <div class="grid-container">
+    <?php include_once 'izbornik.php'; ?>
+    <!-- Start tijelo -->
     <div class="grid-x grid-padding-x">
       
       
@@ -24,19 +25,27 @@
         <p>Fusce felis magna, pellentesque eget mollis a, rutrum id eros. Curabitur auctor varius arcu a consequat. Phasellus quis pulvinar enim, eu ultricies justo. Pellentesque risus libero, dapibus at erat ultricies, gravida varius erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla tempus, justo ut laoreet mollis, nunc tellus convallis urna, vel pretium dui velit eget ligula. Aliquam semper sed nulla a molestie. Maecenas at egestas massa, vitae aliquam mi. Fusce nec sem egestas, pretium lacus non, tincidunt sapien. Sed tristique odio at ultricies vulputate. Integer et convallis augue, eu aliquam enim. Mauris ut faucibus diam. Donec vulputate nunc sed congue accumsan. Etiam lobortis nisi quis lacinia pharetra.</p>
         </div>
       </div>
-      <div class="cell medium-8 medium-cell-block-y">
+      <div  class="cell medium-8 medium-cell-block-y">
         <h2>koristi gornji izbornik</h2>
-        
+        <php style="font-family: <?php echo $_GET['font'] ?>"> 
+        <php style="font-size: <?php echo $_GET['size'] ?>"> 
+        <p style="color: <?php echo $_GET['boja'] ?>">
+            <?php echo $_GET['ime'] ?>
+            
+          </p>
+   
+
       </div>
     </div>
   </div>
   
 </div>
     </div>
-<!--tijelo kraj-->
-    <!--podnozje-->
-    <?php require_once 'podnozje.php'?>
-    <!--jsskripte-->
-    <?php require_once 'jsskripte.php'?>
+    <!-- End tijelo -->
+    <?php 
+    // čitati https://www.tutorialrepublic.com/php-tutorial/php-include-files.php
+    require_once 'podnozje.php'; ?>
+    </div>
+    <?php require_once 'jsskripte.php'; ?>
   </body>
 </html>

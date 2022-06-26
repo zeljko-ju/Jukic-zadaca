@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
   <?php require_once 'zagljavlje.php'?>
@@ -20,11 +19,31 @@
         <p><div class="success callout">
           <?php echo 'Pa kak si kaj?:/'?>
         </div>
-      </div>
+      </div> </p>
       <div class="cell medium-8 medium-cell-block-y">
         
-      </p>
+     
         <h2>koristi gornji izbornik</h2>
+        <div class="grid-x grid-margin-x" id="tijelo">
+        <div class="cell large-1">
+          <div class="success callout">
+            Baja
+          </div>
+        </div>
+        <div class="cell large-1">
+          <div class="warning callout">  
+            je
+          </div>
+        </div>
+        <div class="cell large-1">
+          <div class="alert callout">
+            do
+          </div>
+          <div class="cell large-1">
+          <div class="alert callout">
+            jaja
+          </div>
+        </div>
         
       </div>
     </div>

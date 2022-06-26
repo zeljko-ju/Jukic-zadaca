@@ -12,15 +12,17 @@
           <li>
             <a href="#">parametri</a>
             <ul class="menu vertical">
-              <li><a href="zadatak1.php">Grid sustav</a></li>
+              <li><a href="parametri.php?ime=Pero&boja=grey&tema=blue&size=300%&font=Helvetica">četiriParametra</a></li>
               
             </ul>
           <li>
-            <a href="#">zadaci</a>
+          <a href="#">zadaci</a>
             <ul class="menu vertical">
-              <li><a href="zadatak1111.php">zadatak 1</a></li>
-          
+              <li><a href="zadatak1.php">zadatak 1</a></li>
+              <li><a href="zadatak2.php">zadatak 2</a></li>
+           
             </ul>
+            
 
 
           </li>
