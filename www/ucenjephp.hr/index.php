@@ -9,7 +9,7 @@
     <!-- Start tijelo -->
     <div class="grid-x grid-margin-x" id="tijelo">
       <div class="cell">
-        <div class="callout">
+        <div class="success callout">
           Koristite gornji izbornik
         </div>
       </div>
