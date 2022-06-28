@@ -24,6 +24,11 @@
                     <ul class="menu vertical">
                         <li><a href="osnovephp/varijabla.php" target="_blank">Varijable</a></li>
                         <li><a href="osnovephp/operatori.php" target="_blank">Operatori</a></li>
+                        <li><a href="osnovephp/prviProgram.php" target="_blank">prviProgram</a></li>
+                        <li><a href="osnovephp/uvjetnoGrananjeIf.php" target="_blank">uvjetno grananje</a></li>
+                        <li><a href="osnovephp/uvjetnoGrananjeSwitch.php" target="_blank">uvjetno grananje switch</a></li>
+
+
                     
                     </ul>
                 </li>
@@ -37,6 +42,9 @@
                     <ul class="menu vertical">
                         <li><a target="_blank" href="Z01.php?ime=Bosko&boja=green&font=Arial">Zadatak 1</a></li>
                         <li><a target="_blank" href="Z02.php">Zadatak 2</a></li>
+                        <li><a target="_blank" href="Z03.php">Zadatak 3</a></li>
+                        <li><a target="_blank" href="Z04.php">Zadatak 4</a></li>
+                        <li><a target="_blank" href="Z05.php">Zadatak 5</a></li>
                        
                       
                     </ul>
