@@ -43,7 +43,7 @@
     </div>
     <!-- End tijelo -->
     <?php 
-    // čitati https://www.tutorialrepublic.com/php-tutorial/php-include-files.php
+
     require_once 'podnozje.php'; ?>
     </div>
     <?php require_once 'jsskripte.php'; ?>
