@@ -35,9 +35,10 @@
                 <li>
                     <a href="#">Petlje i nizovi</a>
                     <ul class="menu vertical">
-                        <li><a href="petljeinizovi/nizovi.php" target="_blank">nizovi</a></li>
-                        <li><a href="osnovephp/operatori.php" target="_blank">Operatori</a></li>
-                        <li><a href="osnovephp/prviProgram.php" target="_blank">prviProgram</a></li>
+                        <li><a href="petljeinizovi/nizovi.php" target="_blank">Nizovi</a></li>
+                        <li><a href="petljeinizovi/ugradeniNizovi.php" target="_blank">Ugrađeni nizovi</a></li>
+                        <li><a href="petljeinizovi/funkcijeINizovi.php" target="_blank">Funkcije i nizovi</a></li>
+                        
                         
 
 
