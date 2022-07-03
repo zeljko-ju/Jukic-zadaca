@@ -27,6 +27,7 @@
                         <li><a href="osnovephp/prviProgram.php" target="_blank">prviProgram</a></li>
                         <li><a href="osnovephp/uvjetnoGrananjeIf.php" target="_blank">uvjetno grananje</a></li>
                         <li><a href="osnovephp/uvjetnoGrananjeSwitch.php" target="_blank">uvjetno grananje switch</a></li>
+                        <li><a href="vizualniProgram.php" target="_blank">vizualni program</a></li>
 
 
                     

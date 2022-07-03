@@ -52,4 +52,4 @@ if(isset($_GET['x'])){
     $x=2;
 }
 
-$x = isset($_GET['x']) ? $_GET['x'] : 2; #upitnik bi ovdje simulirao početak else, ako se ne varam
+$x = isset($_GET['x']) ? $_GET['x'] : 2; #upitnik je output, dvotočka je drugi primjer (else)
