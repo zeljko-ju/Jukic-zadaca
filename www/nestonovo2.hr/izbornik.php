@@ -28,6 +28,7 @@
                         <li><a href="osnovephp/uvjetnoGrananjeIf.php" target="_blank">uvjetno grananje</a></li>
                         <li><a href="osnovephp/uvjetnoGrananjeSwitch.php" target="_blank">uvjetno grananje switch</a></li>
                         <li><a href="vizualniProgram.php" target="_blank">vizualni program</a></li>
+                        <li><a href="pokusaj.php" target="_blank">pokusaj</a></li>
 
 
                     
