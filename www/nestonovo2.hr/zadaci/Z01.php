@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
   <head>
-    <?php require_once 'zaglavlje.php'; ?>
+    <?php require_once 'nestonovo2.hr/zaglavlje.php'; ?>
   </head>
 <body>
     <div class="grid-container">
@@ -9,13 +9,15 @@
     <!-- Start tijelo -->
     <div class="grid-x grid-margin-x" id="tijelo">
       <div class="cell">
-        <div class="success callout">
-            
-       <?php echo 'Shaquile O\' Neil'?>
-       <?php echo "You're so \"pretty\"."?>
+        <div class="callout">
+          Koristite gornji izbornik
         </div>
       </div>
     </div>
+    <?php
+    echo 'Hello World', '<br />';
+    echo 'Shaquile \'O Neil';
+    ?>
     <!-- End tijelo -->
     <?php 
    

@@ -10,18 +10,21 @@
     <div class="grid-x grid-margin-x" id="tijelo">
       <div class="cell">
         <div class="callout">
-         <?php
-         
-        $x=$_GET['x'];
-        
-            if ($x % 2 === 0){
-                echo '<body style="background-color:green">';
+        <?php
+
+
+// Stranica prima cijeli broj.
+// ako je broj paran boja stranice treba biti zelena
+// inač treba biti crvena
+
+        $x = isset($_GET['x']) ? $_GET['x'] : 1; 
+
+        if($x%2 ===0){
+        echo '<body style="background-color:green;>';
+            }else {
+              echo '<body style="background-color:red;>';
             }
-            else {
-             echo '<body style="background-color:orange">';
-            }
-        
-        ?>
+            ?>
         </div>
       </div>
     </div>
