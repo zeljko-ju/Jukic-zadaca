@@ -14,5 +14,11 @@ $niz = [
 ];
 
 foreach($niz as $key => $value){
-    echo $key, ' :', $value '<br />';
+    echo $key, ': ', $value, '<br />';
+}
+
+echo '<hr />';
+
+foreach ($niz as $value){
+    echo $value, '<br />';
 }

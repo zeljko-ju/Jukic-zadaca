@@ -78,6 +78,8 @@
                         <li><a target="_blank" href="Z7.php">Zadatak 07</a></li>
                         <li><a target="_blank" href="Z8.php">Zadatak 08</a></li>
                         <li><a target="_blank" href="Z9.php">Zadatak 09</a></li>
+                        <li><a target="_blank" href="Z10.php">Zadatak 10</a></li>
+                        <li><a target="_blank" href="Z11.php">Zadatak 11</a></li>
                        
                       
                     </ul>

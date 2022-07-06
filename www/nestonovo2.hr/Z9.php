@@ -1,39 +1,17 @@
 <?php
-/*
-echo '<table style="border-style:solid">';
-for($i=0;$i<3;$i++){
-    echo '<tr>';
-    for($j=1;$j<3;$j++){
-        echo '<td>';
-        if($i===0 && $j===0)
-        ||
-        ($i===0 && $j===2)
-        ||
-        ($i===2 && $j===0)
-        ||
-        ($i===2 & $j===2) 
-        
-    }{
-        echo 'X';
-    }{echo '</td>';}
-    echo '<tr>';
-}
-echo '</table>';
-*/
-
 echo '<table border="1">';
 for($i=0;$i<3;$i++){
     echo '<tr>';
     for($j=0;$j<3;$j++){
         echo '<td>';
         if(
-            ($i===0 && $j===0)
-            ||
-            ($i===0 && $j===2)
-            ||
-            ($i===2 && $j===0)
-            ||
-            ($i===2 && $j===2)
+        ($i===0 && $j===0)
+        ||
+        ($i===0 && $j===2)
+        ||
+        ($i===2 && $j===0)
+        ||
+        ($i===2 && $j===2)
         ){
             echo 'X';
         }else{
@@ -44,3 +22,38 @@ for($i=0;$i<3;$i++){
     echo '<tr>';
 }
 echo '</table>';
+
+
+echo '<hr />';
+# V2- pokušaj istog sa gET parametrima
+
+$x = isset($_GET['x']) ? $_GET['x'] : 4;
+$y = isset($_GET['y']) ? $_GET['y'] : 4;
+$min = 0;
+
+
+echo '<table border="1">';
+for($i=$min;$i<$x;$i++){
+    echo '<tr>';
+    for($j=$min;$j<$y;$j++){
+        echo '<td>';if(
+            ($i===0 && $j===0)
+            ||
+            ($i===0 && $j===$y-1)
+            ||
+            ($i===$x-1 && $j===0)
+            ||
+            ($i===$x-1 && $j===$y-1)
+            )
+      {
+            echo 'X';
+        }
+        '</td>';
+    }
+    echo '<tr>';
+}
+echo '</table>';
+
+
+echo '<hr />';
+
