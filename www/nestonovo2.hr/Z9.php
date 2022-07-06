@@ -27,8 +27,8 @@ echo '</table>';
 echo '<hr />';
 # V2- pokušaj istog sa gET parametrima
 
-$x = isset($_GET['x']) ? $_GET['x'] : 4;
-$y = isset($_GET['y']) ? $_GET['y'] : 4;
+$x = isset($_GET['x']) ? $_GET['x'] : 13;
+$y = isset($_GET['y']) ? $_GET['y'] : 13;
 $min = 0;
 
 
@@ -47,6 +47,8 @@ for($i=$min;$i<$x;$i++){
             )
       {
             echo 'X';
+        }else{
+            echo '&nbsp;';
         }
         '</td>';
     }

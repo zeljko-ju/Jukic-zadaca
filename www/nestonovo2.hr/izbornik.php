@@ -52,6 +52,21 @@
                     
                     </ul>
                 </li>
+                <li>
+                    <a href="#">Forme</a>
+                    <ul class="menu vertical">
+                        <li><a href="getForma.php" >GET forma</a></li>
+                        <li><a href="postForma.php" >POST forma</a></li>
+
+                       
+
+                        
+                        
+
+
+                    
+                    </ul>
+                </li>
             </ul>
           </li>
           <li>
@@ -80,6 +95,8 @@
                         <li><a target="_blank" href="Z9.php">Zadatak 09</a></li>
                         <li><a target="_blank" href="Z10.php">Zadatak 10</a></li>
                         <li><a target="_blank" href="Z11.php">Zadatak 11</a></li>
+                        <li><a target="_blank" href="Z12.php">Zadatak 12</a></li>
+                        <li><a target="_blank" href="Z13.php">Zadatak 13</a></li>
                        
                       
                     </ul>
