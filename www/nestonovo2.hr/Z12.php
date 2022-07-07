@@ -36,10 +36,9 @@ $naslov=isset($_GET['naslov'])? $_GET['naslov']: '1 ';
 
 
     </form>
-    <?php if(isset($_GET[naslov])){
-        echo '<h'. $naslov '>'.$tekst. '</h'.$naslov;
-    }
-    ?>
+    <?php if(isset($_GET['naslov'])){
+            echo '<h'.$naslov.'>'.$tekst.'</h'.$naslov.'>';
+          }?>
         </div>
       </div>
     </div>

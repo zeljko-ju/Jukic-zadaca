@@ -34,6 +34,9 @@ $ime=isset($_GET['ime'])? $_GET['ime']: ' ';
         <label for="datum">datum i vrijeme</label>
         <input type="datetime-local" id="datum" name="datum" />
 
+        <input placeholder="ivan.horvat@gmail.com">
+        <input type="email" id="email" name="email" />
+
        
         <input
         placeholder="ivan.horvat@tvrtka.hr
