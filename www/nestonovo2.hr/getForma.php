@@ -34,14 +34,12 @@ $ime=isset($_GET['ime'])? $_GET['ime']: ' ';
         <label for="datum">datum i vrijeme</label>
         <input type="datetime-local" id="datum" name="datum" />
 
-        <input placeholder="ivan.horvat@gmail.com">
-        <input type="email" id="email" name="email" />
+        <input
+        placeholder="ivan.horvat@gmail.com"
+       type="email" id="email" name="email" />
 
        
-        <input
-        placeholder="ivan.horvat@tvrtka.hr
-        type="email" id="email" name="email" />
-
+        
         <label for="lozinka">lozinka</label>
         <input type="password" id="password" name="password" />
         <input type="submit" value="Predaj">
@@ -49,19 +47,29 @@ $ime=isset($_GET['ime'])? $_GET['ime']: ' ';
 
         <!--odabiri -->
         <p>jednostruki odabir</p>
-        <input type="radio" id="ljeto" name="gd" value="1">
-        <label for="ljeto">ljeto</label>
-        
+        <input type="radio" id="ljeto" name="gd" value="1" checked="checked"/>
+        <label for="ljeto">ljeto</label><br />
+
+        <input type="radio" id="zima" name="gd" value="1" />
         <label for="zima">zima</label>
-        <input type="radio" id="zima" name="gd" value="2">
         <hr />
+        <p>jednostruki odabir 2</p>
+        <input type="radio" id="ljeto1" name="gd1" value="1" />
+        <label for="ljeto1">ljeto</label><br />
+        
+        <input type="radio" id="zima1" name="gd1" value="1" />
+        <label for="zima1">zima</label>
+
 
         <p>Višestruki odabir</p>
-        <input type="checkbox" id="proljeće" name="vo[]" value="1">
-        <label for="ljeto">ljeto</label>
         
-        <label for="zima">zima</label>
+
+        <input type="checkbox" id="proljece" name="vo[]" value="1" />
+        <label for="proljece">proljeće</label><br />
+        
         <input type="checkbox" id="jesen" name="vo[]" value="2">
+        <label for="jesen">jesen</label>
+        
         <hr />
 
         <p>Odabir iz liste</p>
