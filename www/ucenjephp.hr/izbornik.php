@@ -27,7 +27,10 @@
                         <li><a target="_blank" href="osnovephp/varijabla.php">Varijable</a></li>
                         <li><a target="_blank" href="osnovephp/operatori.php">Operatori</a></li>
                         <li><a target="_blank" href="osnovephp/prviProgram.php">Prvi program</a></li>
+                        <li><a target="_blank" href="osnovephp/uvjetnoGrananjeIf.php">Uvjetno grananje If</a></li>
+                        <li><a target="_blank" href="osnovephp/uvjetnoGrananjeSwitch.php">Uvjetno grananje Switch</a></li>
                         <li><a target="_blank" href="vizualniProgram.php">Vizualni program</a></li>
+                        <li><a target="_blank" href="vizualnizadatak2.php">Vizualni program 2</a></li>
                     </ul>
                 </li>
             </ul>
@@ -38,7 +41,10 @@
             <ul class="menu vertical">
               <li><a href="zadatak1i2.php">zadatak 1 i 2</a></li>
                <li><a href="zadatak3.php">zadatak3</a></li>
-            </ul>
+               <li><a href="zadatak4.php">zadatak4</a></li>
+               <li><a href="zadatak5.php">zadatak5</a></li>
+               <li><a href="zadatak6.php">zadatak6</a></li>
+</ul>
 
 
           </li>
