@@ -12,38 +12,32 @@
     <!-- Start tijelo -->
     
       <div class="grid-x grid-margin-x" id="tijelo">
-        <div class="cell large-2 ">
-          <div class="callout">
+        <div class="cell large-2 medium-4 small-6">
+          <div class="success callout">
             Edunova
           </div>
         </div>
-        <div class="cell medium-2" >
-        <div class="callout"> 
+        <div class="cell large-2 medium-4 small-6">
+          <div class="warning callout">  
             Osijek
           </div>
         </div>
-        <div class="cell medium-2">
+        <div class="cell large-2 medium-4 small-6">
           <div class="alert callout">
             Ponedjeljak
-          </div>
-          
-        </div>
-        <div class="cell medium-2" >
-        <div class="callout"> 
-            petak
           </div>
         </div>
       </div>
 
     <!-- End tijelo -->
 
-    
-
-    
+    <?php 
+   
+    require_once 'podnozje.php'; ?>
 
      
     </div>
-    <?php require_once 'podnozje.php'; ?>
+
     <?php require_once 'jsskripte.php'; ?>
     
   </body>

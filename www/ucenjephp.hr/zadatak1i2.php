@@ -9,15 +9,16 @@
     <!-- Start tijelo -->
     <div class="grid-x grid-margin-x" id="tijelo">
       <div class="cell">
-        <div class="callout">
-         <?php echo "Shaquile O'Neil";?>
+        <div class="success callout">
+         <p>Hello World</p>
+         <?php 
+            echo 'Shaquile \'O Neil';
+            ?>
         </div>
       </div>
     </div>
     <!-- End tijelo -->
-    <?php 
-    // čitati https://www.tutorialrepublic.com/php-tutorial/php-include-files.php
-    require_once 'podnozje.php'; ?>
+    <?php require_once 'podnozje.php'; ?>
     </div>
     <?php require_once 'jsskripte.php'; ?>
   </body>

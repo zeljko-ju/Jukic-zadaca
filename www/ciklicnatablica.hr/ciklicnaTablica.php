@@ -32,20 +32,22 @@ $y=isset($_GET['y'])? $_GET['y']: ' ';
           <input type="submit" value="Predaj">
           <form/>
           <?php
-          $x = isset($_GET['x']) ? $_GET['x'] : 13;
-$y = isset($_GET['y']) ? $_GET['y'] : 13;
-$min = 0;
-
-
-echo '<table border="1">';
+         
+          $min = 0;
+          $start=1;
+          
+          echo '<table border="3">';
 for($i=$min;$i<$x;$i++){
     echo '<tr>';
     for($j=$min;$j<$y;$j++){
         echo '<td>';if(
-       ($i===$x-1 && $j===$y-1)
+            
+            
+            ($i===$x-1 && $j===$y-1)
+            
             )
       {
-            echo '1';
+            echo $start;
         }else{
             echo '&nbsp;';
         }

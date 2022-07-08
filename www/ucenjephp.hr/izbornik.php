@@ -17,12 +17,27 @@
               <li><a href="jedanParametar.php?ime=Edunova">Prijenos parametara</a></li>
               <li><a href="dvaParametra.php?boja=green&ime=Željac">Prijenos dva parametra</a></li>
             </ul>
+          </li>
           <li>
+            <a href="#">Osnove PHP-a</a>
+            <ul class="menu vertical">
+                <li>
+                    <a href="#">Varijabla i tipovi podataka</a>
+                    <ul class="menu vertical">
+                        <li><a target="_blank" href="osnovephp/varijabla.php">Varijable</a></li>
+                        <li><a target="_blank" href="osnovephp/operatori.php">Operatori</a></li>
+                        <li><a target="_blank" href="osnovephp/prviProgram.php">Prvi program</a></li>
+                        <li><a target="_blank" href="vizualniProgram.php">Vizualni program</a></li>
+                    </ul>
+                </li>
+            </ul>
+          </li>
+            <li>
+          
             <a href="#">zadaci</a>
             <ul class="menu vertical">
-              <li><a href="zadatak1.php">zadatak 1</a></li>
-              <li><a href="zadatak2.php">zadatak 2</a></li>
-              <li><a href="zadatak3.php">zadatak3</a></li>
+              <li><a href="zadatak1i2.php">zadatak 1 i 2</a></li>
+               <li><a href="zadatak3.php">zadatak3</a></li>
             </ul>
 
 
