@@ -33,6 +33,19 @@
                         <li><a target="_blank" href="vizualnizadatak2.php">Vizualni program 2</a></li>
                     </ul>
                 </li>
+                <li>
+                    <a href="#">Nizovi i petlje</a>
+                    <ul class="menu vertical">
+                        <li><a target="_blank" href="nizoviipetlje/nizovi.php">nizovi</a></li>
+                        <li><a target="_blank" href="nizoviipetlje/ugradeniNizovi.php">ugrađeni nizovi</a></li>
+                        <li><a target="_blank" href="nizoviipetlje/funkcijeINizovi.php">funkcije i nizovi</a></li>
+                        <li><a target="_blank" href="nizoviipetlje/forPetlja.php">For petlja</a></li>
+                        <li><a target="_blank" href="nizoviipetlje/whilePetlja.php">While petlja</a></li>
+                        <li><a target="_blank" href="nizoviipetlje/doWhilePetlja.php">Do While petlja</a></li>
+                        <li><a target="_blank" href="nizoviipetlje/forEachPetlja.php">For Each petlja</a></li>
+                        
+                    </ul>
+                </li>
             </ul>
           </li>
             <li>
@@ -44,6 +57,9 @@
                <li><a href="zadatak4.php">zadatak4</a></li>
                <li><a href="zadatak5.php">zadatak5</a></li>
                <li><a href="zadatak6.php">zadatak6</a></li>
+               <li><a href="zadatak7.php">zadatak7</a></li>
+               <li><a href="zadatak8.php">zadatak8</a></li>
+               <li><a href="zadatak9.php">zadatak9</a></li>
 </ul>
 
 
