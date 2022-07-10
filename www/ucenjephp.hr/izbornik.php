@@ -46,6 +46,16 @@
                         
                     </ul>
                 </li>
+                <li>
+                    <a href="#">Forme</a>
+                    <ul class="menu vertical">
+                        <li><a target="_blank" href="getForma.php">GET forma</a></li>
+                        <li><a target="_blank" href="postForma.php">post forma</a></li>
+                        
+                        
+                        
+                    </ul>
+                </li>
             </ul>
           </li>
             <li>
@@ -60,6 +70,10 @@
                <li><a href="zadatak7.php">zadatak7</a></li>
                <li><a href="zadatak8.php">zadatak8</a></li>
                <li><a href="zadatak9.php">zadatak9</a></li>
+               <li><a href="zadatak10.php">zadatak10</a></li>
+               <li><a href="zadatak11.php">zadatak11</a></li>
+               <li><a href="zadatak12.php">zadatak12</a></li>
+               <li><a href="zadatak13.php">zadatak13</a></li>
 </ul>
 
 

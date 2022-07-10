@@ -11,9 +11,8 @@
 // 8
 // https://www.php.net/manual/en/reserved.constants.php
 $najveci = PHP_INT_MIN; #koristili smo predefiniranu konstantu
-foreach($_GET as $b){
-    if($b>$najveci){
-        $najveci=$b;
+foreach($_GET as $v){
+    if($v>$najveci){
+        $najveci=$v;
     }
-}
-echo $najveci;
+}echo $najveci;
