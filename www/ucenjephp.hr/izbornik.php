@@ -34,6 +34,13 @@
                     </ul>
                 </li>
                 <li>
+                    <a href="#">Funkcije</a>
+                    <ul class="menu vertical">
+                        <li><a target="_blank" href="vrstefunkcija.php">Vrste funkcija</a></li>
+                       
+                    </ul>
+                </li>
+                <li>
                     <a href="#">Nizovi i petlje</a>
                     <ul class="menu vertical">
                         <li><a target="_blank" href="nizoviipetlje/nizovi.php">nizovi</a></li>
@@ -74,6 +81,7 @@
                <li><a href="zadatak11.php">zadatak11</a></li>
                <li><a href="zadatak12.php">zadatak12</a></li>
                <li><a href="zadatak13.php">zadatak13</a></li>
+               <li><a href="zadatak14.php">zadatak14</a></li>
 </ul>
 
 

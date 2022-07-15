@@ -1,19 +1,14 @@
 <?php
-echo 'Hello World!', '<hr />'; 
 
-$var= 'varijabla';
-echo $var, '<br />';
+// Program prima parametar x
+// ako je vrijednost cijeli broj ispisuje ga
+// inače ispisuje poruku da mora biti cijeli broj
 
-$bool= 'istina';
-$uvjet= true;
+$x= isset($_GET['x'])?$_GET['x']:'55';
+$intX= (int)$x;
 
-
-$var= [6,5,66,'niz', 5.55];
-
-$var= [
-    'ime'=>'Željko',
-    'prezime'=> 'Prezimenko',
-    'skola'=>'Edunova'
-];
-
-echo $niz['prezime'];
+if($intX!==0){
+    echo $intX;
+}else{
+    echo 'mora biti cijeli broj';
+}

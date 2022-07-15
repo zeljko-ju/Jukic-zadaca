@@ -1,17 +1,8 @@
 <?php
 
-$x = isset($_GET['x']) ? $_GET['x'] : 0;
 
-$y = isset($_GET['y']) ? $_GET['y'] : 0;
-
-echo $x. ', '. $y, '<br />' ;
-
-/* 
-Primljeni parametar GET metode naziv ispisati crvenom bojom
-*/
-$var=isset($_GET['naziv'])? $_GET['naziv']: 'nije postavljena';
-echo '<span style="color:red;">', $var, '</span>','<br />';
-
+$boja=isset($_GET['boja'])?$_GET['boja']:'hallo';
+echo '<span style="color: red;">', $boja;
 
 $x = isset($_GET['x']) ? (int)$_GET['x'] : 3;
 $y = isset($_GET['y']) ? (int)$_GET['y'] : 3;

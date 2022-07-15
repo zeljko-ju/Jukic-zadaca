@@ -63,24 +63,31 @@ echo '</tr>';
 echo '</table>';
 */
 
-
+$x = isset($_GET['x']) ? $_GET['x'] :4;
+$y = isset($_GET['y']) ? $_GET['y'] : 4;
+$br=1;
+$start1=$x-1;
+$end1=0;
+$start2=$y-1;
+$end2=0;
 echo '<table border="4" style="background-color:grey">';
 for($i=0;$i<$x;$i++){
     echo '<tr>';
 for($j=0;$j<$y;$j++){
-    echo '<td>';
-    for()
-     '</td>';
+    echo '<td>';if
+        ($start1 < $end1){
+        for($i=$start1;$i>=end2;$i++)
+        $a[$i][$end2] =$br++;
+    }else{
+        echo '&nbsp;';
+    
+    
+    
+    }echo '</td>';
 }
 echo '</tr>';
 }
 echo '</table>';
-
-
-while($i===$x-1){
-    while($j===$y-1){
-        if($i===$x-1 && $j===0){
-            break 2;
-        }
-    }
-}
+//trebam  ($i===$x-1 && $j===0)
+       // ||
+        //($i===$x-1 && $j===$y-1)
