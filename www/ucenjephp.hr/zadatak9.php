@@ -1,93 +1,103 @@
-<?php
+<!--
 
 // Ispišite tablicu 3 x 3 na način
 // da u ćelijama kuteva stavite znak X
 
 // DZ: Napraviti da radi za bilo koja dva unesena broja
 //     Putem GET metode
-
-$x = isset($_GET['x']) ? $_GET['x'] :15;
-$y = isset($_GET['y']) ? $_GET['y'] : 15;
-$start=0;
-
-echo '<table border="4" style="background-color:grey">';
-for($i=0;$i<$x;$i++){
-    echo '<tr>';
-for($j=0;$j<$y;$j++){
-    echo '<td>';
-    if(
-        ($i===0 && $j===0)
-        ||
-        ($i===0 && $j===$y-1)
-        ||
-        ($i===$x-1 && $j===0)
-        ||
-        ($i===$x-1 && $j===$y-1)
-        ){
-        echo $start++;
-    }else{
-        echo '&nbsp;';
-        
-    }echo '</td>';
-}
-echo '</tr>';
-}
-echo '</table>';
-
 /*
-$x = isset($_GET['x']) ? $_GET['x'] :;
-$y = isset($_GET['y']) ? $_GET['y'] : 5;
-$start=1;
-echo '<table border="4" style="background-color:grey">';
-for($i=0;$i<$x;$i++){
+echo '<table border="3" style="background-color: rgba(55, 75, 120, .4)">';
+for($i=0;$i<=2;$i++){
     echo '<tr>';
-for($j=0;$j<$y;$j++){
-    echo '<td>';
-    while(
-        
-        (($i===$x-1 && $j===$y-1) < ($i===$x-1 &&$j===0))
-        
-        
-        ){
-        echo $start++, '<br />';
-    
-    }else{
-        echo '&nbsp;';
+    for($j=0;$j<=2;$j++){
+        echo '<td>';
+        if(
+            ($i===0 && $j===0)
+            ||
+            ($i===0 && $j===2)
+            ||
+            ($i===2 && $j===0)
+            ||
+            ($i===2 && $j===2)        ){
+            echo 'X';
+        }else{
+            echo '&nbsp;';
+        }
+        '</td>';
     }
-    
-    
-    '</td>';
-}
-echo '</tr>';
-}
-echo '</table>';
-*/
+    echo '</tr>';
 
-$x = isset($_GET['x']) ? $_GET['x'] :4;
-$y = isset($_GET['y']) ? $_GET['y'] : 4;
-$br=1;
-$start1=$x-1;
-$end1=0;
-$start2=$y-1;
-$end2=0;
-echo '<table border="4" style="background-color:grey">';
-for($i=0;$i<$x;$i++){
-    echo '<tr>';
-for($j=0;$j<$y;$j++){
-    echo '<td>';if
-        ($start1 < $end1){
-        for($i=$start1;$i>=end2;$i++)
-        $a[$i][$end2] =$br++;
-    }else{
-        echo '&nbsp;';
-    
-    
-    
-    }echo '</td>';
 }
-echo '</tr>';
-}
-echo '</table>';
-//trebam  ($i===$x-1 && $j===0)
-       // ||
-        //($i===$x-1 && $j===$y-1)
+echo '</table>';*/
+-->
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <?php require_once 'zaglavlje.php'; ?>
+  </head>
+<body>
+    <div class="grid-container">
+    
+    <?php include_once 'izbornik.php'; ?>
+    <!-- Start tijelo -->
+    
+    <div class="grid-x grid-margin-x" id="tijelo">
+      <div class="cell">
+        <div class="success callout">
+        <?php
+            $brojredova = isset($_GET['brojredova']) ? $_GET['brojredova'] : '0';
+            $brojstupaca = isset($_GET['brojstupaca']) ? $_GET['brojstupaca'] : '0';
+            ?>
+          <form action="" method="get">
+          <input 
+            placeholder="broj redova"
+            type="number" id="brojredova" name="brojredova" value="<?=$brojredova?>" />
+            <input 
+            placeholder="broj stupaca"
+            type="number" id="brojstupaca" name="brojstupaca" value="<?=$brojstupaca?>" />
+            <input type="submit" value="predaj">
+            
+            
+            
+
+          </form>
+          
+         
+        </div>
+        <?php
+            echo '<table border="9" style="background-color: rgba(255, 5, 120, .8)">';
+        for($i=0;$i<=$brojredova-1;$i++){
+        echo '<tr>';
+         for($j=0;$j<=$brojstupaca-1;$j++){
+            echo '<td>';
+            if(
+                ($i===0 && $j===0)
+                ||
+                ($i===0 && $j===$brojstupaca-1)
+                ||
+                ($i===$brojredova-1 && $j===0)
+                ||
+                ($i===$brojredova-1 && $j===$brojstupaca-1)       ){
+                echo 'X';
+            }else{
+                echo '&nbsp;';
+            }
+            '</td>';
+        }
+        echo '</tr>';
+    
+    }
+    echo '</table>';
+    ?>
+      </div>
+     
+    </div>
+    
+
+    <!-- End tijelo -->
+    <?php require_once 'podnozje.php'; ?>
+    </div>
+    <?php require_once 'jsskripte.php'; ?>
+  </body>
+</html>
+

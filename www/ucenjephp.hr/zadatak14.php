@@ -26,15 +26,14 @@ parniBrojevi();
 
 echo '<hr />';
 
-$niz=[6,4,2,5,1,5,6,3,12,2];
 
-function zbroj($niz)
+$niz= [2,5,4,7,5,11,7,8];
+function zbroj($niz):int|float
 {
-    $sum =0;
+    $suma=0;
     foreach($niz as $vrijednost){
-    $sum +=$vrijednost;
-}
-echo $sum;
-}
+        $suma+=$vrijednost;
+    }    echo $suma;
 
-zbroj($niz);
+}
+echo zbroj($niz);
