@@ -17,7 +17,7 @@
 	<p><?php echo $errors; ?></p>
 <?php } ?>
           <form action="index.php" method="post"><strong>dodaj u popis zadataka:</strong>
-          <input type="text" name="zadatak" id="zadatak">
+          <input type="text" name="zadatak" id="zadatak" value="zadatak">
         
           <input type="submit" class="submit success button expanded" name="submit" value="dodaj">
           </form>
@@ -30,7 +30,7 @@
         $db = mysqli_connect("localhost", "root", "", "todo");
       
         if (isset($_POST['submit'])) {
-          if (empty($_POST['task'])) {
+          if (empty($_POST['zadaci'])) {
             $errors = "Morate unijeti vrijednost";
           }else{
             $zadaci = $_POST['zadaci'];
@@ -39,10 +39,33 @@
             header('location: index.php');
           }
         }	
-      
+
+        $zadatak = mysqli_query($db, "SELECT * FROM zadatak");
+
+        $i = 1; while ($row = mysqli_fetch_array($zadatak))
+        
+        $lista= '<li>';
+        if (isset($_POST['zadatak'])){
+            
+            echo '<pre>';
+            echo '<li>',  $_POST['zadatak'], '<a style="color:red" href="index.php">       X</a>';
+          echo '</li>'; 
+          echo '</pre>'; 
+          $row++;
+         }
+          
+
+          
       
         
+        
+
+
+
+
         ?>
+
+
       </div>
       </div>
     </div>
