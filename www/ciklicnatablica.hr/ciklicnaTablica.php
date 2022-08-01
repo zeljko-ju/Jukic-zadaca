@@ -17,9 +17,9 @@ $y=isset($_GET['y'])? $_GET['y']: ' ';
         <?php 
          // ulaz
           // GET parametar x i y
-          $x = isset($_GET['x']) ? $_GET['x'] : 0; 
-          $y = isset($_GET['y']) ? $_GET['y'] : 0; 
-          $z = isset($_GET['z']) ? $_GET['z'] : 0;
+          $x = isset($_GET['x']) ? $_GET['x'] : 3; 
+          $y = isset($_GET['y']) ? $_GET['y'] : 3; 
+          
 
           ?>
           <form action="" method="get">
@@ -32,10 +32,26 @@ $y=isset($_GET['y'])? $_GET['y']: ' ';
           <input type="submit" value="Predaj">
           <form/>
           <?php
-         
+         //obrada
           $min = 0;
-          $start=1;
+          $matrix=[[]];
+          $redStart=$x-1;
+          $stupacStart=$y-1;
+          $redKraj=0;
+          $stupacKraj=0;
           
+
+          while($stupacStart<=$stupacKraj && $redStart<=$redKraj){
+            for($i=$redstart;$i<=redKraj;$i++)
+            $matrix[$redStart][$i];{
+              $redStart++;
+            }
+          }
+         
+         
+         
+         
+         /*
           echo '<table border="3">';
 for($i=$min;$i<$x;$i++){
     echo '<tr>';
@@ -59,6 +75,7 @@ echo '</table>';
 
 
 echo '<hr />';
+*/
 ?>
 
         </div>

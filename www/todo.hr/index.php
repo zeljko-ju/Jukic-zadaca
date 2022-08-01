@@ -1,3 +1,9 @@
+<?php
+          $a = isset($_GET['a']) ? $_GET['a'] : '';
+          
+
+          ?>
+
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
   <head>
@@ -12,23 +18,35 @@
         <div class="success callout">
           <h3>TO DO LIST</h3>
           
-          
-          <?php if (isset($errors)) { ?>
-	<p><?php echo $errors; ?></p>
-<?php } ?>
-          <form action="index.php" method="post"><strong>dodaj u popis zadataka:</strong>
-          <input type="text" name="zadatak" id="zadatak" value="zadatak">
+        
+         
+          <form action="index.php" method="post">
+            <label for="a"><strong>dodaj u popis zadataka:</strong></label>
+          <input type="text" name="a" id="a" value="<?=$a?>">
         
           <input type="submit" class="submit success button expanded" name="submit" value="dodaj">
           </form>
           
-          <?php 
+          <?php
+          $a = isset($_POST['a']) ? $_POST['a'] : '';
+          echo '<table border="10" style="background-color:grey">';
+          for($i=0;$i<=10;$i++){
+            echo '<tr>';
+            for($j=0;$j<=1;$j++){
+               
+              echo '<td>';
+              if
+              '</td>';
+            echo '</tr>';}
+            }
           
-        $errors = "";
+
+          ?>
+      
       
        
-        $db = mysqli_connect("localhost", "root", "", "todo");
-      
+        
+      <?php /*
         if (isset($_POST['submit'])) {
           if (empty($_POST['zadaci'])) {
             $errors = "Morate unijeti vrijednost";
@@ -39,7 +57,7 @@
             header('location: index.php');
           }
         }	
-
+        /*
         $zadatak = mysqli_query($db, "SELECT * FROM zadatak");
 
         $i = 1; while ($row = mysqli_fetch_array($zadatak))
@@ -54,7 +72,7 @@
           $row++;
          }
           
-
+         */
           
       
         
