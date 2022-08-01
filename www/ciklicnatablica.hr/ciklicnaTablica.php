@@ -39,13 +39,17 @@ $y=isset($_GET['y'])? $_GET['y']: ' ';
           $stupacStart=$y-1;
           $redKraj=0;
           $stupacKraj=0;
+          $start=1;
+          
           
 
           while($stupacStart<=$stupacKraj && $redStart<=$redKraj){
-            for($i=$redstart;$i<=redKraj;$i++)
-            $matrix[$redStart][$i];{
-              $redStart++;
-            }
+            for($i=$redstart;$i<=redKraj;$i++){
+            $matrix[$stupacStart][$i]=$start++;
+          }
+            $redPocetak--;
+            if($start > $x*$y)
+            break;
           }
          
          
