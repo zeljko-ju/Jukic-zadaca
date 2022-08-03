@@ -33,53 +33,73 @@ $y=isset($_GET['y'])? $_GET['y']: ' ';
           <form/>
           <?php
          //obrada
-          $min = 0;
-          $matrix=[[]];
-          $redStart=$x-1;
-          $stupacStart=$y-1;
-          $redKraj=0;
-          $stupacKraj=0;
-          $start=1;
-          
-          
+         
 
-          while($stupacStart<=$stupacKraj && $redStart<=$redKraj){
-            for($i=$redstart;$i<=redKraj;$i++){
-            $matrix[$stupacStart][$i]=$start++;
-          }
-            $redPocetak--;
-            if($start > $x*$y)
-            break;
-          }
-         
-         
-         
-         
-         /*
-          echo '<table border="3">';
-for($i=$min;$i<$x;$i++){
-    echo '<tr>';
-    for($j=$min;$j<$y;$j++){
-        echo '<td>';if(
-            
-            
-            ($i===$x-1 && $j===$y-1)
-            
-            )
-      {
-            echo $start;
-        }else{
-            echo '&nbsp;';
-        }
-        '</td>';
-    }
-    echo '<tr>';
-}
-echo '</table>';
+
 
 
 echo '<hr />';
-*/
+$rows=$_GET['x'];
+$columns=$_GET['y'];
+
+$maxRow=$rows-1;
+            $maxColumn=$columns-1;
+            $start=1;
+            $matrix=[[]];
+            $minColumn=0;
+            $minRow=0;
+            while ($start <= $rows*$columns) 
+            {
+                for($j=$maxColumn; $j >= $minColumn; $j--)
+                {
+                    $matrix[$maxRow][$j] = $start++;
+                }
+                    $maxRow--;
+                    
+                    if ($start > $rows*$columns) 
+                    break;
+
+
+
+
+                for ($i=$maxRow; $i >= $minRow ;$i--) 
+                { 
+                    $matrix[$i][$minColumn] = $start++;
+                }
+                    $minColumn++;
+                    if ($start > $rows*$columns) 
+                    break;
+
+                for ($j=$minColumn; $j <= $maxColumn; $j++) 
+                { 
+                    $matrix[$minRow][$j] = $start++;
+                }
+                    $minRow++;
+                    if ($start > $rows*$columns) break;
+                for ($i=$minRow; $i <= $maxRow; $i++) 
+                { 
+                    $matrix[$i][$maxColumn] = $start++;
+                }
+                    $maxColumn--;    
+            
+            }
+//izlaz
+            echo '<table border="3">';
+            for($i=0;$i<$x;)
+                    {
+                      echo '<tr>';
+                        for ($j=0; $j < $y;) 
+                        { 
+                          echo '<td>'. $matrix[$i][$j] .'</td>';
+                          $j++;
+                        }
+                        echo '</tr>';
+                        $i++;
+                    } 
+            
+            echo '</table>';
+            
+
 ?>
 
         </div>
