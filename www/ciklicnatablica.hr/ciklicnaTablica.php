@@ -39,10 +39,10 @@ $y=isset($_GET['y'])? $_GET['y']: ' ';
 
 
 echo '<hr />';
-$rows=$_GET['x'];
-$columns=$_GET['y'];
+        $rows=$_GET['x'];
+        $columns=$_GET['y'];
 
-$maxRow=$rows-1;
+            $maxRow=$rows-1;
             $maxColumn=$columns-1;
             $start=1;
             $matrix=[[]];

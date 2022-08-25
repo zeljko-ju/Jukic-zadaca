@@ -63,6 +63,16 @@
                         
                     </ul>
                 </li>
+                <li>
+                    <a href="#">OOP</a>
+                    <ul class="menu vertical">
+                        <li><a target="_blank" href="klasaObjekt.php">Klasa / objekt</a></li>
+                        <li><a target="_blank" href="metode.php">Metode - funkcije u klasi</a></li>
+                        <li><a target="_blank" href="magicneMetode.php">Magične metode</a></li>
+                        <li><a target="_blank" href="klasaPristup.php">Pristup svojstvima i metodama u klasi</a></li>
+                       
+                    </ul>
+                </li>
             </ul>
           </li>
             <li>
