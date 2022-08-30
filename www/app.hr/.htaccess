@@ -1,0 +1,8 @@
+# uključivanje URL rewrite
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-REQUEST-f 
+
+RewriteCond %{REQUEST_FILENAME} !-REQUEST-d 
+
+RewriteRule (.*) index.php [L,E=PATH_INFO:/$1]
