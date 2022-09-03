@@ -1,37 +1,38 @@
 <?php
 
-class App 
+class App
 {
     public static function start()
     {
-        //echo 'Hello from App::Start';
+        // echo 'Hello from App::start';
         $ruta = Request::getRuta();
 
-        $djelovi = explode('/',$ruta);
-       // log::log($djelovi);
+        $dijelovi = explode('/', $ruta);
+
+        //Log::log($dijelovi);
 
         $klasa='';
-        if(!isset($djelovi[1]) || $djelovi[1]===''){
+        if(!isset($dijelovi[1]) || $dijelovi[1]===''){
             $klasa = 'IndexController';
         }else{
-            $klasa=ucfirst($djelovi[1]) . ' Controller';
+            $klasa = ucfirst($dijelovi[1]) . 'Controller';
         }
-      //  log::log($klasa);
         
-        metoda:'';
-        if(!isset($djelovi[2]) || $djelovi[2]===''){
-            $metoda='index';
+        //Log::log($klasa);
+
+        $metoda = '';
+        if(!isset($dijelovi[2]) || $dijelovi[2]===''){
+            $metoda = 'index';
         }else{
-            $metoda=$djelovi[2];
+            $metoda = $dijelovi[2];
         }
-   //log::log($metoda);
+         //Log::log($metoda);
 
-    if (class_exists($klasa) && method_exists($klasa,$metoda)){
-        $instanca = new $klasa();
-        $instanca->$metoda();
-    }else {
-        echo 'Ne postoji ' .$klasa . '-&gt' .$metoda;
+        if(class_exists($klasa) && method_exists($klasa, $metoda)){
+            $instanca = new $klasa();
+            $instanca->$metoda();
+        }else{
+            echo 'Ne postoji ' . $klasa . '-&gt' . $metoda;
+        }
     }
-    }
-
 }

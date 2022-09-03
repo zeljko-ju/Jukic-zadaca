@@ -45,7 +45,7 @@ echo '<hr />';
             $maxRow=$rows-1;
             $maxColumn=$columns-1;
             $start=1;
-            $matrix=[[]];
+            $matrix=[];
             $minColumn=0;
             $minRow=0;
             while ($start <= $rows*$columns) 

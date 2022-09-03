@@ -1,18 +1,22 @@
+
 <?php
 
 class SmjerController extends Controller
-{   
-    private $putanja = 'privatno' . DIRECTORY_SEPARATOR .
-    'smjer' . 
-    DIRECTORY_SEPARATOR . 'index'
+{
+
+    private $putanja='privatno' . 
+    DIRECTORY_SEPARATOR . 'smjer' . 
+    DIRECTORY_SEPARATOR;
+
     public function index()
     {
-       $view = new view();
-       $this->view->render($this->putanja .'index'
- , [
-    'grad'= 'Osijek', 
-    'brojevi' =>[
-        1,6,7,4
-    ]
- ]    }
+        // echo 'Hello Smjer';
+        //$view = new View(); - izvučeno u nadklasu
+        $this->view->render($this->putanja . 'index',[
+            'grad'=>'Osijek',
+            'brojevi'=>[
+                1,4,7,8
+            ]
+        ]);
+    }
 }
