@@ -23,18 +23,20 @@ set_include_path($putanje);
 
 //echo $putanje, '<br />';
 spl_autoload_register(function($klasa){
-    //echo 'U funkciji spl_autoload_register sam' . $klasa . '<br />';
+    //echo 'U spl_autoload_register funkciji sam, tražim klasu ' . $klasa , '<br />'; 
     $putanje = explode(PATH_SEPARATOR,get_include_path());
-    foreach($putanje as $p){
-       // echo $p, '<br />';
-       $datoteka = $p . DIRECTORY_SEPARATOR . $klasa . '.php';
-       //echo $datoteka . '<br />';
-       if(file_exists($datoteka)){
-        require_once $datoteka;
-        break;
-       }
-    }
-});
+     foreach($putanje as $p){
+         //echo $p, '<br />';
+         $datoteka = $p . DIRECTORY_SEPARATOR . $klasa . '.php';
+         //echo $datoteka, '<br />';
+         if(file_exists($datoteka)){
+             require_once $datoteka;
+             break;
+         }
+     }
+ });
+ 
+ App::start();
 //require BP_APP . 'controller/SmjerController.php';
 //$c = new SmjerController();
 //$c->index();
