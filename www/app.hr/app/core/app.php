@@ -32,20 +32,43 @@ class App
             $instanca = new $klasa();
             $instanca->$metoda();
         }else{
-            echo 'Ne postoji ' . $klasa . '-&gt' . $metoda;
-        }
-    }
-    public static function config($kljuc)
-    {
-        $configFile = BP_APP . 'konfiguracija.php';
-        $config = require $configFile;
-        if(isset($config[$kljuc])){
-            return $config[$kljuc];
-        }else{
-            return 'Ključ ' . $kljuc . ' ne postoji u datoteci ' .  $configFile;
+            //echo 'Ne postoji ' . $klasa . '-&gt' . $metoda;
+            $view = new View();
+            $view->render('errorKlasaMetoda',[
+                'klasa'=>$klasa,
+                'metoda'=>$metoda
+            ]);
         }
     }
 
-    
+
+    public static function config($kljuc)
+    {
+        $configFile = BP_APP . 'konfiguracija.php';
+        if(!file_exists($configFile)){
+            return 'Datoteka ' . $configFile . ' ne postoji. Kreirajte ju';
+        }
+        $config = require $configFile;
+        if(isset($config[$kljuc])){
+            return $config[$kljuc];
+        }
+
+        return 'Ključ ' . $kljuc . ' ne postoji u datoteci ' .  $configFile;
+   
+    }
+
+    public static function auth()
+    {
+        if(!isset($_SESSION)){
+            return false;
+        }
+
+        if(!isset($_SESSION['autoriziran'])){
+            return false;
+        }
+
+        return true;
+    }
+
 }
 

@@ -6,6 +6,6 @@ class Controller
 
     public function __construct()
     {
-        $this->view = new view();
-    }
+        $this->view = new View();
+    } 
 }

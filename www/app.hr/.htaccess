@@ -1,11 +1,16 @@
-# uključivanje URL rewrite
+# uključiti URL rewrite
 RewriteEngine On
 
-RewriteCond %{REQUEST_FILENAME} !-REQUEST-f 
+# za produkciju - ne radi, popraviti
+# RewriteBase /mojaaplikacija/
 
-RewriteCond %{REQUEST_FILENAME} !-REQUEST-d 
 
+# preskoči ako postoji datoteka
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# preskoči ako postoji direktorij
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Svi zahtjevi idu na index.php
 RewriteRule (.*) index.php [L,E=PATH_INFO:/$1]
 
-
-RewriteRule (.*) index.php [L,E=PATH_INFO:/$1]

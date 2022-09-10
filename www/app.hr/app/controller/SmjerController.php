@@ -1,4 +1,3 @@
-
 <?php
 
 class SmjerController extends Controller
