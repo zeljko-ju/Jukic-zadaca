@@ -9,6 +9,10 @@
     <ul class="dropdown menu" data-dropdown-menu>
       <li class="menu-text"><?php  echo App::config('nazivApp');?></li>
       <li><a href="<?=App::config('url') ?>">Početna</a></li>
+      <?php if(App::auth()): ?>
+        <li><a href="<?=App::config('url') ?>Nadzorna pločanadzornaploca"></a></li>
+      
+        <?php endif; ?>
     </ul>
   </div>
   <div class="top-bar-right">
@@ -17,6 +21,7 @@
         <li><a href="<?=App::config('url') ?>login/prijava">Prijava</a></li>
       <?php else: ?>
         <li><a href="<?=App::config('url') ?>login/odjava">Odjava</a></li>
+        <?=App::user()->prezime?><?=App::user()->ime?>
         <?php endif; ?>
     </ul>
   </div>

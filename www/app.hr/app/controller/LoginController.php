@@ -7,7 +7,7 @@ class LoginController extends Controller
        // $this->view->render('prijava',[
         //    'poruka'=>'Popunite tražene podatke'
        // ]);
-       $this->prijavaView('operater@edunova.hr','Popunite tražene podatke');
+       $this->prijavaView('oper@edunova.hr','Popunite tražene podatke');
     }
 
     public function autorizacija()
@@ -37,20 +37,19 @@ class LoginController extends Controller
             return;
         }
 
-        // ovdje sam siguran kako su uneseni email i lozinka
+       
+        $veza = DB::getInstance();
         
-        if($_POST['email']!=='operater@edunova.hr' ||
-            $_POST['password']!=='o'){
-                $this->prijavaView($_POST['email'],'Email i Lozinka ne ispravno');
-                return; 
-            }
+        echo $veza->errorCode();
+        //Log::log($veza);
+            // uredi kod dolje, nisam stigao popratiti
+        $operater = Operater::autoriziraj$this->prijavaView($_POST['email'],'Lozinka obavezno');
+        
 
-
-            // kasnije ćemo se spojiti na bazu
-            $_SESSION['autoriziran']=$_POST['email'];
+            $_SESSION['autoriziran']=$operater;
             //$np = new NadzornaplocaController();
             //$np->index();
-            header('location:' . App::config('url') . 'nadzornaploca');
+           //header('location:' . App::config('url') . 'nadzornaploca');
 
     }
 

@@ -32,6 +32,7 @@ set_include_path($putanje);
 spl_autoload_register(function($klasa){
    //echo 'U spl_autoload_register funkciji sam, tražim klasu ' . $klasa , '<br />'; 
    $putanje = explode(PATH_SEPARATOR,get_include_path());
+    
     foreach($putanje as $p){
         //echo $p, '<br />';
         $datoteka = $p . DIRECTORY_SEPARATOR . $klasa . '.php';

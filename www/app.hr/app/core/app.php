@@ -70,5 +70,11 @@ class App
         return true;
     }
 
+    public static function user()
+    {
+        return $_SESSION['autoriziran'];
+        
+    }
+
 }
 

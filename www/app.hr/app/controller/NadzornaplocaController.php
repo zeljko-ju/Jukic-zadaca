@@ -1,6 +1,6 @@
 <?php
 
-class NadzornaPlocaController extends Controller
+class NadzornaPlocaController extends AutorizacijaController
 {
     public function index()
     {
