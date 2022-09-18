@@ -1,0 +1,26 @@
+<table>
+    <thead>
+        <tr>
+            <th>Naziv</th>
+            <th>Cijena</th>
+            <th>Trajanje</th>
+            <th>certificiran</th>
+            <th>akcija</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <?php foreach($smjerovi as $s) ?>
+                <tr>
+                    <td><?=$s->naziv?></td>
+                    <td><?=$s->cijena?></td>
+                    <td><?=$s->trajanje?></td>
+                    <td><?=$s->upisnina?></td>
+                    <td><?=$s->certificiran?></td>
+                </tr>
+            <?php end foreach;?>
+        </tr>
+    </tbody>
+
+</table>

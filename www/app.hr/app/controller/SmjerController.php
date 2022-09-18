@@ -1,21 +1,14 @@
 <?php
 
-class SmjerController extends Controller
+class SmjerController extends AutorizacijaController
 {
 
-    private $putanja='privatno' . 
-    DIRECTORY_SEPARATOR . 'smjer' . 
-    DIRECTORY_SEPARATOR;
+   private $phtml = "privatno"
+   DIRECTORY_SEPARATOR = 'privatno' . DIRECTORY_SEPARATOR;
 
     public function index()
     {
-        // echo 'Hello Smjer';
-        //$view = new View(); - izvučeno u nadklasu
-        $this->view->render($this->putanja . 'index',[
-            'grad'=>'Osijek',
-            'brojevi'=>[
-                1,4,7,8
-            ]
-        ]);
+        $this->render($this->phtmlDir.'read',[
+        'smjerovi'=> Smjer::read()]
     }
 }
