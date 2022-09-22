@@ -1,0 +1,48 @@
+<?php
+
+<form method="post" 
+action="<?=App::config('url')?>smjer/brisanje/<?=$smjer->sifra>">
+  <h4 class="text-center">brisanje smjera</h4>
+  
+  <label>Naziv
+    <input type="text" disabled='disabled' name="naziv" value="<?=$smjer->naziv?>" />
+  </label>
+
+  <label>Cijena
+    <input type="number" disabled='disabled' name="cijena" value="<?=$smjer->cijena?>" />
+  </label>
+
+  <label>Trajanje
+    <input type="number" disabled='disabled' name="trajanje" value="<?=$smjer->trajanje?>" />
+  </label>
+
+  <label>Upisnina
+    <input type="number" disabled='disabled' name="upisnina" value="<?=$smjer->upisnina?>" />
+  </label>
+
+  <label>Certificiran
+    <input type="checkbox" name="certificiran" <?php 
+    if($smjer->certificiran){
+        echo 'checked="checked"';
+    }
+    ?> />
+  </label>
+  <?=$poruka?>
+
+
+  <div class="grid-x grid-padding-x">
+  <div class="large-6 cell">
+ <?php if($brisanje): ?>
+    <input type="hidden" name="obrisi" value="true"/>
+
+  <a class="alert button expanded" 
+            href="<?=App::config('url')?>smjer">Odustani</a>
+    </div>
+    <div class="large-6 cell">
+        <input type="submit" class="button expanded" value="Promjeni"></input>
+    </div>
+  </div>
+
+
+
+</form>
