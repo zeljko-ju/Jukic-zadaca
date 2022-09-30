@@ -1,0 +1,32 @@
+<?php
+
+class PredavacController extends AutorizacijaController
+{
+    private $phtmlDir = 'privatno' . 
+    DIRECTORY_SEPARATOR . 'predavaci' . 
+    DIRECTORY_SEPARATOR;
+
+    private $entiteti=null;
+    private $poruka='';
+
+    public function index()
+    {
+        $this->view->render($this->phtmlDir . 'index', [
+            'entiteti'=>Predavac::read()
+        ]);
+    }
+
+    public function testinsert()
+    {
+        for($i=0;$i<10;$i++){
+            echo Predavac::create([
+                'ime'=>'Jozo ' .$i,
+                'prezime'=>'Marić',
+                'email'=>'',
+                'oib'=>'',
+                'iban'=>''
+            ]);
+        }
+    }
+
+}
